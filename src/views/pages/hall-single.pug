@@ -1,0 +1,231 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--hall-single
+        .top-block.p-0
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main ЗАЛЫ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item Кисловодск #[span.num (6)]
+                            a(href="#").top-navigation__item.current Ессентуки #[span.num (3)]
+                            a(href="#").top-navigation__item Пятигорск #[span.num (2)]
+                            a(href="#").top-navigation__item Железноводск #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+        section.hall-main-block
+            .bg-wrapper
+                +pictureAdaptive('hall-single', 'png', '1300', '448')
+            .hall-main-block__content
+                h1.h1-common.hall-main-block__title Зал имени В. И. Сафонова
+                .hall-main-block__address Адрес: г. Кисловодск, ул. К. Маркса, 3а
+                a(href="#how-to-get").hall-main-block__how-to-get.js-scroll-to Как добраться?
+        section.hall-description
+            .bg-wrapper
+                +picture('gradient-bg4', 'png', '1020', '290')
+            .hall-description__content В этом зале, рассчитанном на 700 мест, звучал дивный голос Антонины Неждановой, здесь состоялся последний на Кавминводах концерт Сергея Рахманинова, ровно за месяц до прощального выступления Федора Шаляпина. И сегодня на сцене старинного зала, который носит свое имя с 1992 года, проводятся камерные, симфонические и сольные концерты артистов Филармонии, а также приглашенных исполнителей, как российских, так и зарубежных.
+        section.events-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                h3.h3-common.events-block__title.text-left Ближайшие события #[span.num (8)]
+                .events-horizontal
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                .show-more
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.hall-plan
+            .container
+                h3.h3-common.hall-plan__title План мест зала
+                .hall-plan__img
+                    +pictureFancybox('hall-plan', 'png', '1170', '535', 'hall-plan')
+        section.virtual-tour
+            .container
+                h3.h3-common.virtual-tour__title Виртуальная экскурсия по залу
+                .virtual-tour__box#virtual-tour-box(data-swf="data/virtual-tour/tour.swf" data-xml="data/virtual-tour/foie.xml")
+        section.section-wrapper
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .gallery
+                .gallery-slider-wrapper
+                    .pretty-arrow.pretty-arrow--top.pretty-arrow--prev
+                        +icon('pretty-arrow-black')
+                    .pretty-arrow.pretty-arrow--top.pretty-arrow.pretty-arrow--next
+                        +icon('pretty-arrow-black')
+                    .container
+                        h3.h3-common.gallery__title Галерея события
+                    .gallery-slider.js-gallery-slider
+                        .gallery-slider__slide
+                            +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                        .gallery-slider__slide
+                            +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                        .gallery-slider__slide.gallery-slider__slide--video
+                            .gallery-slider__video
+                                +icon('play')
+                            .gallery-slider__content
+                                .gallery-slider__video-title Видео
+                            +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+                        .gallery-slider__slide
+                            +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                        .gallery-slider__slide
+                            +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                        .gallery-slider__slide.gallery-slider__slide--video
+                            .gallery-slider__video
+                                +icon('play')
+                            .gallery-slider__content
+                                .gallery-slider__video-title Видео
+                            +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+            .hall-history
+                .container
+                    .read-more-wrapper.js-read-more-wrapper
+                        .read-more-container.js-read-more-container
+                            .hall-history__title Истории зала
+                            .hall-history__text С сентября 2015 года Главным дирижёром Академического симфонического оркестра им. В.И. Сафонова Северо-Кавказской государственной филармонии является лауреат Всероссийского и международного конкурсов Димитрис Ботинис.  Оркестр под управлением маэстро Ботиниса  дал в регионе Кавказских Минеральных Вод десятки симфонических концертов и оперных спектаклей. За это время публика имела возможность услышать сложные симфонические полотна таких композиторов как Рихард Вагнер, Рихард Штраус, Иоганнес Брамс, Людвиг ван Бетховен, Дмитрий Шостакович, Сергей Прокофьев, Александр Скрябин, Сергей Рахманинов, Модест Мусоргский, Пётр Чайковский, Ян Сибелиус, Густав Малер, Феликс Мендельсон-Бартольди, Морис Равель, Клод Дебюсси, Бела Барток, Игорь Стравинский, Бенджамин Бриттен, Антонин Дворжак, Франц Шуберт, Эдвард Элгар, Джордж Гершвин. В 2016 году Северо-Кавказская филармония и Димитрис Ботинис в качестве дирижёра-постановщика выпустили оперный спектакль В.Моцарта «Так поступают все женщины», который пользуется неизменным успехом у публики. В июле 2017 года с большим успехом прошла премьера оперного спектакля Д.Пуччини «Тоска» (режиссер - Диего Вилли Корна (Швейцария). В ноябре 2018 года - премьера оперы Н.А. Римского-Корсакова "Царская невеста" (режиссер - Алла Чепинога (Москва)). Эти постановки, без сомнения, стали украшением оперного репертуара Филармонии.
+                    .read-more-toggle.js-read-more-toggle Подробнее
+        section.how-to-get#how-to-get
+            .container
+                h3.h3-common.how-to-get__main-title Как добраться до зала?
+                .how-to-get__box
+                    .how-to-get__col.how-to-get__left
+                        .how-to-get__icon
+                            +icon('marker')
+                        .how-to-get__content
+                            .how-to-get__content-box
+                                a(href="#").how-to-get__name Зал им. Сафонова:
+                                .how-to-get__address Кисловодск,  ул. К. Маркса, 3а
+                    .how-to-get__col.how-to-get__center
+                        .how-to-get__icon
+                            +icon('bus')
+                        .how-to-get__content
+                            .how-to-get__content-box
+                                .how-to-get__title В Кисловодске
+                                .how-to-get__text Зал находится в Курортном парке, недалеко от Нарзанной галереи.
+                            .how-to-get__content-box
+                                .how-to-get__subtitle Общественный транспорт
+                                .how-to-get__text
+                                    p До Курзала можно доехать на маршрутках:
+                                    p #[b 114]  — остановка «Остановка»
+                                    p #[b 115]  — остановка «Остановка»
+                    .how-to-get__col.how-to-get__right
+                        .how-to-get__icon
+                            +icon('train')
+                        .how-to-get__content
+                            .how-to-get__content-box
+                                .how-to-get__title Из других городов
+                                .how-to-get__text Доехать до Кисловодска удобнее всего на электричке.
+
+                .how-to-get__map.map-container#map-single(data-json="data/map-single.json")
+        section.other-halls
+            .container
+                h3.h3-common.other-halls__title Другие залы
+                .halls__items.halls__items--scroll.js-swipe-scroll
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+
+
+

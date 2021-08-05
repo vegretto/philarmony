@@ -1,0 +1,52 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--halls
+        .top-block
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main Лица #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item Солисты филармонии #[span.num (6)]
+                            a(href="#").top-navigation__item.current Коллектив и руководители
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Солисты филармонии
+        section.persons-list
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .persons-list__items
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item1', 'png')
+                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item2', 'png')
+                        .persons-list__name Филармонический хор им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item1', 'png')
+                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item2', 'png')
+                        .persons-list__name Филармонический хор им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item1', 'png')
+                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item2', 'png')
+                        .persons-list__name Филармонический хор им. В.И. Сафонова

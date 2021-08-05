@@ -1,0 +1,140 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    .main-wrapper.main-wrapper--contacts
+        .top-block
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Контакты филармонии
+        .main-wrapper__box
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .main-wrapper__box-inner
+                    aside.sidebar
+                        nav.sidebar__nav
+                            a(href="#desks-halls").sidebar__nav-item.js-scroll-to.js-scroll-watch.current Кассы и залы в городах
+                            a(href="#contacts-socials").sidebar__nav-item.js-scroll-to.js-scroll-watch Социальные сети
+                            a(href="#contacts-cont-block").sidebar__nav-item.js-scroll-to.js-scroll-watch Вопросы и сотрудничество
+                            a(href="#write-us").sidebar__nav-item.js-scroll-to.js-scroll-watch Задать вопрос
+                    main.main-content.contacts
+                        section.desks-halls#desks-halls
+                            h3.h3-common.desks-halls__title.text-left Кассы и залы филармонии
+                            .desks-halls__box
+                                .desks-halls__item
+                                    .desks-halls__city Кисловодск
+                                    a(href="tel:+78793720422").desks-halls__phone 8 (8793) 72-04-22
+                                    .desks-halls__hall
+                                        a(href="#") Курзал
+                                        span.desks-halls__annotation (все залы Кисловодска расположены в одном здании):
+                                    .desks-halls__address г. Кисловодск, пр. К. Маркса, 3а
+                                .desks-halls__item
+                                    .desks-halls__city Ессентуки
+                                    a(href="tel:+78793720422").desks-halls__phone 8 (8793) 72-04-22
+                                    .desks-halls__hall
+                                        a(href="#") Зал им. Ф. И. Шаляпина
+                                        span.desks-halls__annotation (все залы в одном здании):
+                                    .desks-halls__address г. Ессентуки, ул. Кисловодская, 2
+                                .desks-halls__item
+                                    .desks-halls__city Железноводск
+                                    a(href="tel:+78793720422").desks-halls__phone 8 (8793) 72-04-22
+                                    .desks-halls__hall
+                                        a(href="#") Городской дворец культуры:
+                                    .desks-halls__address г. Железноводск, ул. Чайковского, 1  #[span.desks-halls__annotation (главный вход в Курортный парк)]
+                                .desks-halls__item.desks-halls__item--big
+                                    .desks-halls__city Пятигорск
+                                    .desks-halls__item-inner
+                                        .desks-halls__col
+                                            a(href="tel:+78793720422").desks-halls__phone 8 (8793) 39-14-36
+                                        .desks-halls__col
+                                            .desks-halls__hall
+                                                a(href="#") Кассы и зал «Лермонтовская галерея»:
+                                            .desks-halls__address г. Пятигорск, пр. Кирова, 21а   #[span.desks-halls__annotation (парк «Цветник»)]
+                                        .desks-halls__col
+                                            .desks-halls__hall
+                                                a(href="#") Зал «Камертон»:
+                                            .desks-halls__address г. Пятигорск, ул. Дунаевского, 5   #[span.desks-halls__annotation (парк им. С. М. Кирова)]
+                                            .desks-halls__address Касса зала расположена рядом с залом «Лермонтовская галерея»
+                        section.contacts-map
+                            h3.h3-common.contacts-map__title.text-left Адреса на карте
+                            .contacts-map__container.map-container#map-multi(data-json="/data/map-multi.json")
+                        section.contacts-socials#contacts-socials
+                            h3.h3-common.contacts-socials__title Социальные сети
+                            .contacts-socials__text Здесь мы рассказываем о новых событиях афиши и жизни филармонии
+                            .socials
+                                a(href="#").socials__item
+                                    +icon('vk')
+                                a(href="#").socials__item
+                                    +icon('facebook')
+                                a(href="#").socials__item.socials__item--insta
+                                    +icon('instagram')
+                                a(href="#").socials__item
+                                    +icon('odnoklassniki')
+                                a(href="#").socials__item
+                                    +icon('youtube')
+                        section.contacts-cont-block#contacts-cont-block
+                            .bg-wrapper.bg-wrapper--no-of
+                                +picture('gradient-bg6', 'png', '870', '370')
+                            .contacts-cont-block__title Вопросы и сотрудничество
+                            a(href="tel:+78793721801").contacts-cont-block__phone 8 (8793) 72-18-01
+                            .contacts-cont-block__box
+                                .contacts-cont-block__item
+                                    .contacts-cont-block__subtitle Время работы:
+                                    .contacts-cont-block__text Пн–Пт 9:00–18:00
+                                    .contacts-cont-block__subtext (перерыв 13:00–14:00)
+                                    .contacts-cont-block__text Сб–Вс — выходной
+                                .contacts-cont-block__item
+                                    .contacts-cont-block__subtitle E-mail:
+                                    a(href="mailto:info@kursal.ru").contacts-cont-block__text info@kursal.ru
+
+                                .contacts-cont-block__item
+                                    .contacts-cont-block__subtitle Почтовый адрес:
+                                    .contacts-cont-block__text 357700, г. Кисловодск, ул. Карла Маркса, 3а
+                        section.contact-workers
+                            .contact-workers__items
+                                .contact-workers__item
+                                    .contact-workers__job Директор по концертной деятельности
+                                    .contact-workers__name Аванесов  Роман Анатольевич
+                                    a(href="tel:+78793720422").contact-workers__phone 8 (8793) 72-18-01
+                                .contact-workers__item
+                                    .contact-workers__job Директор по концертной деятельности
+                                    .contact-workers__name Чаплыгина Александра Николаевна
+                                    a(href="tel:+78793720422").contact-workers__phone 8 (8793) 72-18-01
+                                .contact-workers__item
+                                    .contact-workers__job Директор по концертной деятельности
+                                    .contact-workers__name Аванесов  Роман Анатольевич
+                                    a(href="tel:+78793720422").contact-workers__phone 8 (8793) 72-18-01
+                                .contact-workers__item
+                                    .contact-workers__job Директор по концертной деятельности
+                                    .contact-workers__name Чаплыгина Александра Николаевна
+                                    a(href="tel:+78793720422").contact-workers__phone 8 (8793) 72-18-01
+                                .contact-workers__item
+                                    .contact-workers__job Директор по концертной деятельности
+                                    .contact-workers__name Аванесов  Роман Анатольевич
+                                    a(href="tel:+78793720422").contact-workers__phone 8 (8793) 72-18-01
+                        section.write-us#write-us
+                            h3.h3-common.write-us__title Напишите нам
+                            .write-us__subtitle Мы всегда отвечаем и рады помочь
+                            form
+                                .write-us__form-box
+                                    .write-us__left
+                                        +form-group(false, 'form-group--text', 'text', 'custom-input custom-input--text', 'name', 'name', 'Ваше имя', false)
+                                        +form-group(false, 'form-group--text', 'email', 'custom-input custom-input--text', 'mail', 'mail', 'Адрес почты *', true)
+                                        +form-group(false, 'form-group--text', 'tel', 'custom-input custom-input--text', 'phone', 'phone', 'Телефон', false)
+                                    .write-us__right
+                                        +form-group(false, 'form-group--text form-group--textarea', 'textarea', 'custom-input custom-input--text', 'message', 'message', 'Ваше сообщение или пожелание*', true)
+                                .form-group.form-group--checkbox.js-checkbox
+                                    .custom-cb-badge.js-custom-cb.checked
+                                    label.custom-checkbox__label(for="checkbox-allow") Согласен с #[a(href="#") политикой конфиденциальности] и #[a(href="#") Соглашением]
+                                    input.custom-checkbox(type="checkbox" name="checkbox-allow" id="checkbox-allow" required="required")
+                                    .error-message Это поле обязательно для заполнения
+                                button.common-btn.common-btn--blue.js-open-modal(data-modal="modal-write-us-complete") Отправить
+
+block append modals
+    include ../components/modal-write-us-complete

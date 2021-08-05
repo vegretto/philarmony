@@ -1,0 +1,68 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--filarmony
+        .top-block
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main НОВОСТИ И ЖУРНАЛ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item.current Новости #[span.num (6)]
+                            a(href="#").top-navigation__item Журнал #[span.num (3)]
+                            a(href="#").top-navigation__item Приглашаем #[span.num (2)]
+                            a(href="#").top-navigation__item О нас говорят #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+        section.hall-main-block.hall-main-block--filarmony
+            .bg-wrapper
+                +picture('filarmony', 'png')
+            .hall-main-block__content
+                h1.h1-common.hall-main-block__title Добро пожаловать<br>в Курзал на Водах
+        section.inner-navlinks
+            a(href="#").inner-navlinks__item.inner-navlinks__item--bg
+                .bg-wrapper
+                    +picture('link1')
+                .inner-navlinks__title История филармонии
+                .inner-navlinks__icon
+                    +icon('pretty-arrow')
+            a(href="#").inner-navlinks__item
+                .inner-navlinks__title Наши достижения
+                .inner-navlinks__icon
+                    +icon('pretty-arrow')
+            a(href="#").inner-navlinks__item.inner-navlinks__item--yellow
+                .inner-navlinks__title Вакансии
+                .inner-navlinks__icon
+                    +icon('pretty-arrow')
+        section.news-block
+            .container
+                .section__top
+                    .section__title Новости филармонии
+                .news
+                    .row
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020

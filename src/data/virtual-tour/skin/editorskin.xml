@@ -1,0 +1,70 @@
+<krpano>
+<events onloadcomplete="set(autorotate.enabled, false)" />
+
+<layer name="crosshoriz" type="container" keep="true" visible="true" align="center" width="100" height="1" x="0" y="0" background="true" bgcolor="0xff0000" bgalpha="0.2" />
+
+<layer name="gs_h1" type="container" keep="true" visible="true" align="topleft" width="100%" height="1" x="0" y="33.3%" background="true" bgcolor="0xffffff" bgalpha="0.2" />
+<layer name="gs_h2" type="container" keep="true" visible="true" align="topleft" width="100%" height="1" x="0" y="66.6%" background="true" bgcolor="0xffffff" bgalpha="0.2" />
+<layer name="gs_v1" type="container" keep="true" visible="true" align="topleft" width="1" height="100%" x="33.3%" y="0" background="true" bgcolor="0xffffff" bgalpha="0.2" />
+<layer name="gs_v2" type="container" keep="true" visible="true" align="topleft" width="1" height="100%" x="66.6%" y="0" background="true" bgcolor="0xffffff" bgalpha="0.2" />
+
+	<plugin name="options" url="../plugins/options.swf" x="" y="" align="" edge="" keep="true" />
+	<plugin name="vtoureditor" url="../plugins/vtoureditor.swf" keep="true" />
+	
+<layer name="addimage" type="image" keep="true" url="camera.png" visible="true" align="topleft" vcenter="true"
+x="6" y="40" handcorsor="true" onclick="add_hotspot();"/>
+
+<plugin name="hotspotinfo_title" url="%SWFPATH%/plugins/textfield.swf" keep="true" html="Параметры хотспота" css="font-family:Courier;" borderwidth="0" align="left" x="10" y="-110" width="220" height="20" visible="false" />
+<plugin name="hotspotinfo" url="%SWFPATH%/plugins/textfield.swf" keep="true" html="" css="font-family:Courier;" borderwidth="0" align="left" x="10" width="220" height="200" backgroundalpha="0.5" visible="false" />
+<action name="add_hotspot" >
+	set(plugin[hotspotinfo].visible, true);
+	set(plugin[hotspotinfo_title].visible, true);
+	set(hsovercount, get(hotspot.count));
+	trace(hsovercount);
+	add(hscount, get(hsovercount), 1);
+	txtadd(hsname, imagespot, get(hscount));
+	txtadd(popupname, popup, get(hscount));
+	txtadd(popupname, .jpg );
+	trace(hsname);
+	addhotspot( get(hsname) );
+	set(hotspot[get(hsname)].url, '%SWFPATH%/skin/bluebuttons.png');
+	set(hotspot[get(hsname)].crop, 82|113|41|35);
+	copy(hotspot[get(hsname)].ath, view.hlookat);
+	copy(hotspot[get(hsname)].atv, view.vlookat);
+	set(hotspot[get(hsname)].onhover, showtext(Показать фото) );
+	set(hotspot[get(hsname)].ondown, draghotspot() );
+</action>
+<action name="draghotspot">
+<![CDATA[
+if(%1 != dragging,
+ spheretoscreen(ath, atv, hotspotcenterx, hotspotcentery);
+ sub(drag_adjustx, mouse.stagex, hotspotcenterx); 
+ sub(drag_adjusty, mouse.stagey, hotspotcentery); 
+ draghotspot(dragging);
+ ,
+ if(pressed,
+ sub(dx, mouse.stagex, drag_adjustx);
+ sub(dy, mouse.stagey, drag_adjusty);
+ screentosphere(dx, dy, ath, atv);
+ copy(print_ath, ath);
+ copy(print_atv, atv);
+ roundval(print_ath, 3);
+ roundval(print_atv, 3);
+ txtadd(plugin[hotspotinfo].html,
+ '&lt;hotspot name="'
+ ,get(name),'"
+ style="popup_spot"
+ [br]ath="',get(print_ath),'"[br]atv="',get(print_atv),'"[br]onhover=&quot;showtext(Фото)&quot;
+ [br]onclick="open_popup(', get(popupname),');"
+ ',,'
+ /&gt;
+ [br]
+ &lt;plugin name="preload_', get(name),'" visible="false" keep="false" url="%SWFPATH%/photos/xxx.jpg" /&gt;
+ ');
+ delayedcall(0, draghotspot(dragging) );
+ );
+ );
+]]>
+</action>
+
+</krpano>

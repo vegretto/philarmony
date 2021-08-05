@@ -1,0 +1,119 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--gallery
+        .top-block
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Проекты филармонии
+        section.festivals-block
+            .container
+                .festivals
+                    a(href="#").festivals__item.festivals__item--single
+                        .festivals__img
+                            +picture('festivals-big', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+        section.festivals-block
+            .container
+                .festivals
+                    a(href="#").festivals__item.festivals__item--md
+                        .festivals__img
+                            +picture('festivals-big', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item.festivals__item--md
+                        .festivals__img
+                            +picture('festivals-big', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                .show-more.mb-0
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.history-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .history-slider__wrapper
+                .history-slider__arrow-wrapper.history-slider__arrow-wrapper--prev
+                    .pretty-arrow.pretty-arrow--black.pretty-arrow--prev
+                        +icon('pretty-arrow-black')
+                    .history-slider__side-year 1852
+                .history-slider__arrow-wrapper.history-slider__arrow-wrapper--next
+                    .history-slider__side-year 1955
+                    .pretty-arrow.pretty-arrow--black.pretty-arrow--next
+                        +icon('pretty-arrow-black')
+                .history-slider.js-history-slider
+                    .history-slider__slide
+                        .history-slider__top-wrapper
+                            .history-slider__slide-year 1850
+                            .history-slider__img
+                                +pictureFancybox('history1', 'png', '580', '310', 'history')
+                        .history-slider__text Официальной датой рождения Филармонии считается 1895 год — это год постройки знаменитого Курортного зала в Кисловодске — главного здания Филармонии, а также год создания постоянного симфонического оркестра — ныне Академического симфонического оркестра им. В.И. Сафонова. Идея такого внушительного и высокоорганизованного концертного предприятия принадлежала выдающемуся отечественному музыканту Василию Ильичу Сафонову, в то время занимавшему пост директора Московской консерватории и председателя Московского Отделения Русского Музыкального общества и ведущего активную просветительскую деятельность.
+                    .history-slider__slide
+                        .history-slider__top-wrapper
+                            .history-slider__slide-year 1892
+                            .history-slider__img
+                                +pictureFancybox('history1', 'png', '580', '310', 'history')
+                        .history-slider__text Официальной датой рождения Филармонии считается 1895 год — это год постройки знаменитого Курортного зала в Кисловодске — главного здания Филармонии, а также год создания постоянного симфонического оркестра — ныне Академического симфонического оркестра им. В.И. Сафонова. Идея такого внушительного и высокоорганизованного концертного предприятия принадлежала выдающемуся отечественному музыканту Василию Ильичу Сафонову, в то время занимавшему пост директора Московской консерватории и председателя Московского Отделения Русского Музыкального общества и ведущего активную просветительскую деятельность.
+                    .history-slider__slide
+                        .history-slider__top-wrapper
+                            .history-slider__slide-year 1987
+                            .history-slider__img
+                                +pictureFancybox('history1', 'png', '580', '310', 'history')
+                        .history-slider__text Официальной датой рождения Филармонии считается 1895 год — это год постройки знаменитого Курортного зала в Кисловодске — главного здания Филармонии, а также год создания постоянного симфонического оркестра — ныне Академического симфонического оркестра им. В.И. Сафонова. Идея такого внушительного и высокоорганизованного концертного предприятия принадлежала выдающемуся отечественному музыканту Василию Ильичу Сафонову, в то время занимавшему пост директора Московской консерватории и председателя Московского Отделения Русского Музыкального общества и ведущего активную просветительскую деятельность.
+        section.section-wrapper
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .playlists
+                .playlists__tag.playlists__tag--1 дома
+                .playlists__tag.playlists__tag--2 по дороге на работу
+                .playlists__tag.playlists__tag--3 во время прогулки
+                .container
+                    h2.h2-common Слушайте вечную классику вместе с нами
+                    .playlists__wrapper
+                        .playlists__item
+                            iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                        .playlists__item
+                            iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                        .playlists__item
+                            iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                    .playlists__slogan
+                        .playlists__slogan-left
+                            .playlists__slogan-text1 Классика
+                            .playlists__slogan-text2 это современно
+                        .playlists__slogan-right
+                            a(href="#").common-btn.common-btn--blue Все плейлисты
+            .news-block
+                .container
+                    .section__top
+                        .section__title Новости филармонии
+                    .news
+                        .row
+                            .col-3
+                                a(href="#").news__item
+                                    .bg-wrapper
+                                        +picture('news1', 'png', '370', '300')
+                                    .news__title Абонементы сезона зима-весна уже в продаже!
+                                    .news__date 11.05.2020
+
+                            .col-3
+                                a(href="#").news__item
+                                    .bg-wrapper
+                                        +picture('news1', 'png', '370', '300')
+                                    .news__title Абонементы сезона зима-весна уже в продаже!
+                                    .news__date 11.05.2020
+
+                            .col-3
+                                a(href="#").news__item
+                                    .bg-wrapper
+
+                                    .news__title Абонементы сезона зима-весна уже в продаже!
+                                    .news__date 11.05.2020

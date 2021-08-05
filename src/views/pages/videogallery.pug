@@ -1,0 +1,126 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--videogallery
+        .top-block
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        a(href="#").breadcrumbs__item Залы филармонии
+                        .breadcrumbs__item Хлебные крошки
+            .container
+                h1.h1-common Видеогаллерея
+        section.filters
+            .container
+                .filters__subtitle.mobile-hide Выбрать жанр:
+                .filters__dropdowns.mb-0
+                    .filters__dropdown.mobile-only
+                        .filters__open-dropdown.open-dropdown.js-open-dropdown Выбрать жанр
+                            +icon('arrow-down')
+                        .filters__dropdown-box.dropdown.js-dropdown
+                            .filters__dropdown-box-inner
+                    .filters__box
+                        .filters__item.mobile-move.js-toggle-active
+                            | Органная музыка
+                            span.filters__item-num (40)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Симфонический оркестр
+                            span.filters__item-num (20)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Филармонический хор
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Музыкальный спектакль
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Детский спектакль
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Камерные программы
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Опера
+                            span.filters__item-num (10)
+        section.videos
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .videos__items
+                    .videos__item
+                        .videos__img
+                            .videos__text Видео
+                            .videos__icon
+                                +icon('play')
+                            +videoFancyboxYT('https://www.youtube.com/watch?v=S61ENc51Z1Q', 'event-gallery-video', 'png', '', '', '', '', 'videogallery')
+                        .videos__bottom
+                            .videos__title Длинное название видео
+                            .videos__author Симфонический оркестр
+                    .videos__item
+                        .videos__img
+                            .videos__text Видео
+                            .videos__icon
+                                +icon('play')
+                            +videoFancyboxYT('https://www.youtube.com/watch?v=S61ENc51Z1Q', 'event-gallery-video', 'png', '', '', '', '', 'videogallery')
+                        .videos__bottom
+                            .videos__title Длинное название видео
+                            .videos__author Симфонический оркестр
+                    .videos__item
+                        .videos__img
+                            .videos__text Видео
+                            .videos__icon
+                                +icon('play')
+                            +videoFancyboxYT('https://www.youtube.com/watch?v=S61ENc51Z1Q', 'event-gallery-video', 'png', '', '', '', '', 'videogallery')
+                        .videos__bottom
+                            .videos__title Длинное название видео
+                            .videos__author Симфонический оркестр
+                    .videos__item
+                        .videos__img
+                            .videos__text Видео
+                            .videos__icon
+                                +icon('play')
+                            +videoFancyboxYT('https://www.youtube.com/watch?v=S61ENc51Z1Q', 'event-gallery-video', 'png', '', '', '', '', 'videogallery')
+                        .videos__bottom
+                            .videos__title Длинное название видео
+                            .videos__author Симфонический оркестр
+                    .videos__item
+                        .videos__img
+                            .videos__text Видео
+                            .videos__icon
+                                +icon('play')
+                            +videoFancyboxYT('https://www.youtube.com/watch?v=S61ENc51Z1Q', 'event-gallery-video', 'png', '', '', '', '', 'videogallery')
+                        .videos__bottom
+                            .videos__title Длинное название видео
+                            .videos__author Симфонический оркестр
+                    .videos__item
+                        .videos__img
+                            .videos__text Видео
+                            .videos__icon
+                                +icon('play')
+                            +videoFancyboxYT('https://www.youtube.com/watch?v=S61ENc51Z1Q', 'event-gallery-video', 'png', '', '', '', '', 'videogallery')
+                        .videos__bottom
+                            .videos__title Длинное название видео
+                            .videos__author Симфонический оркестр
+                .show-more.mb-0
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.big-links-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .big-links
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img1', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Откройте удивительный мир музыки ребенку
+                            .big-links__text.text-center Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img2', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Музей филармонии в Кисловодске
+                            .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда

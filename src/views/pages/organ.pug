@@ -1,0 +1,360 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--organ
+        .top-block.p-0
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main.current ЗАЛЫ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item Кисловодск #[span.num (6)]
+                            a(href="#").top-navigation__item Ессентуки #[span.num (3)]
+                            a(href="#").top-navigation__item Пятигорск #[span.num (2)]
+                            a(href="#").top-navigation__item Железноводск #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+        section.infoblock
+            .infoblock__bg
+                +picture('gradient-bg2', 'png', '1300', '1133')
+            .container
+                h2.h2-common.h2-common--gray Ощутите глубину звука,<br>величественность и магию органа
+                .infoblock__inner
+                    .infoblock__left
+                        .infoblock__left-text Два уникальных немецких органа
+                        .infoblock__img-wrapper
+                            .infoblock__img.infoblock__img-left
+                                +picture('infoblock1_1', 'png', '447', '447')
+                                .infoblock__img-text Орган «SAUER»<br>из Франкфурта-на-Одере
+                            .infoblock__img.infoblock__img-right
+                                +picture('infoblock1_2', 'png', '447', '447')
+                                .infoblock__img-text Немеций орган «Walker»<br> из старой церкви в Берлине
+                    .infoblock__right
+                        .infoblock__photo
+                            +picture('infoblock1_3', 'png', '120', '120')
+                        .infoblock__subtitle Органистка с мировым именем
+                        .infoblock__name Светлана Бережная
+                        .infoblock__right-text Выступления в 15 кафедральных соборах мира:<br>от Нотр-Дам-де-Пари в Париже до Сан-Томас Кафедраль в Нью-Йорке
+                .infoblock__bottom
+                    .infoblock__bottom-inner
+                        .infoblock__bottom-text Слияние света, музыки и цвета в&nbsp;светопроекционных органных спектаклях
+        section.events-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                h3.h3-common.events-block__title.text-left Ближайшие события#[span.num (8)]
+                .events-horizontal
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                .show-more.mb-0
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.main-person.pt-7
+            .container
+                h1.h1-common.main-person__title Услышать одну из лучших органисток мира
+                .main-person__inner.main-person__inner--people
+                    .main-person__info-left
+                        .main-person__job Дипломант международного конкурса
+                        .main-person__name Наталья Говорская
+                        .main-person__job сопрано
+                    .main-person__img
+                        +picture('person2', 'png')
+                    .main-person__info
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        section.quote.quote--gradient
+            .container
+                h3.h3-common.quote__title Почему музыка важна<br>для развития ребенка?
+                .quote__box
+                    .gradient-block.gradient-block--yellow
+                    .gradient-block.gradient-block--blue
+                    +icon('quote')
+                    .quote__text Музыка является самым чудодейственным, самым тонким средством привлечения к добру, красоте, человечности.<br>Чувство красоты музыкальной мелодии открывает перед ребенком собственную красоту
+                    .quote__author В. А. Сухомлинский
+        section.sticky-side-blocks
+            .container
+                h3.h3-common.sticky-side-blocks__title.text-left Орган «Walker»
+            .sticky-side-blocks__box
+                .sticky-side-blocks__content
+                    .sticky-side-blocks__text
+                        p Созданный в конце 1965 года, музей Северо-Кавказской филармонии им. В.И. Сафонова уже более полувека является важным культурным центром г. Кисловодска и гордостью Филармонии. Три выставочных зала, более 10 тысяч уникальных экспонатов, 12 выставок в год – все это Музей.
+                        p Два музейных зала посвящены истории Курзала и биографии маэстро В.И. Сафонова. Здесь представлены подлинные документы, касающиеся жизни и творчества знаменитых музыкантов, артистов, певцов и культурных деятелей России, бывавших в Кисловодске и Курзале, как дореволюционного, так и советского периода. Особую ценность представляют подлинные документы семьи В.И. Сафонова: письма, семейные альбомы, фотографии, афиши, программы концертов и др. Бесценные экспонаты были подарены музею внуком великого музыканта и дирижера – Ильей Кирилловичем Сафоновым.
+                .sticky-side-blocks__img
+                    +picture('museum-hall1', 'png')
+            .container
+                h3.h3-common.sticky-side-blocks__title.text-right Орган «SAUER»
+            .sticky-side-blocks__box.sticky-side-blocks__box--inverted
+                .sticky-side-blocks__content
+                    .sticky-side-blocks__text
+                        p Созданный в конце 1965 года, музей Северо-Кавказской филармонии им. В.И. Сафонова уже более полувека является важным культурным центром г. Кисловодска и гордостью Филармонии. Три выставочных зала, более 10 тысяч уникальных экспонатов, 12 выставок в год – все это Музей.
+                        p Два музейных зала посвящены истории Курзала и биографии маэстро В.И. Сафонова. Здесь представлены подлинные документы, касающиеся жизни и творчества знаменитых музыкантов, артистов, певцов и культурных деятелей России, бывавших в Кисловодске и Курзале, как дореволюционного, так и советского периода. Особую ценность представляют подлинные документы семьи В.И. Сафонова: письма, семейные альбомы, фотографии, афиши, программы концертов и др. Бесценные экспонаты были подарены музею внуком великого музыканта и дирижера – Ильей Кирилловичем Сафоновым.
+                .sticky-side-blocks__img
+                    +picture('museum-hall2', 'png')
+        section.gallery
+            .gallery-slider-wrapper
+                .pretty-arrow.pretty-arrow--top.pretty-arrow--prev
+                    +icon('pretty-arrow-black')
+                .pretty-arrow.pretty-arrow--top.pretty-arrow.pretty-arrow--next
+                    +icon('pretty-arrow-black')
+                .container
+                    h3.h3-common.gallery__title Галерея
+                .gallery-slider.js-gallery-slider
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+        section.festivals-block.festivals-block-scroll
+            .container
+                h3.h3-common.festivals-block__title.text-left Фестивали органной музыки
+                .festivals.festivals--scroll.js-swipe-scroll
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+
+        section.events-block.events-block--scroll
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                h3.h3-common.events-block__title Репертуар Солиста
+                .events.events--scroll.events--repertoire.js-swipe-scroll
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+
+                            .events-item__additional-dates Ближайшее событие:  #[b 15 января 19:00]
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер вокально-инструментальной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                            .events-item__additional-dates Ближайшее событие:  #[b Пока неизвестно]
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+        section.big-links-block.pt-0
+            .container
+                .big-links
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img1', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Откройте удивительный мир музыки ребенку
+                            .big-links__text.text-center Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img2', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Музей филармонии в Кисловодске
+                            .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда

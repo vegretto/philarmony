@@ -1,0 +1,64 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--gallery
+        .top-block
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main НОВОСТИ И ЖУРНАЛ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item.current Новости #[span.num (6)]
+                            a(href="#").top-navigation__item Журнал #[span.num (3)]
+                            a(href="#").top-navigation__item Приглашаем #[span.num (2)]
+                            a(href="#").top-navigation__item О нас говорят #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Галерея филармонии
+        section.big-links-block.big-links-block--style2
+            .bg-wrapper
+                +picture('gradient-bg3', 'png', '1300', '900')
+            .container
+                .big-links.big-links--style2
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img3', 'png', '567', '352')
+                        .big-links__video
+                            +icon('play')
+                        .big-links__content
+                            .big-links__title Видео
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img4', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Аудиогалерея
+        a(href="#").phone-link
+            +pictureAdaptive('phone', 'png', 759, 385)
+            .phone-link__content
+                .phone-link__round-text#js-circle-text Смотрите дома в любое время
+                .phone-link__title Онлайн-трансляции и записи концертов на YouTube
+        section.big-links-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .big-links
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img1', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Откройте удивительный мир музыки ребенку
+                            .big-links__text.text-center Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img2', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Музей филармонии в Кисловодске
+                            .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда

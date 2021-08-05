@@ -1,0 +1,42 @@
+header.header
+    .container.container--header
+        .header__inner
+            a(href="#").header__logo-box
+                .header__logo
+                    +icon('logo')
+                .header__logo-inner
+                    .header__logo-descriptor Северо-Кавказская государственная Филармония имени В.&nbsp;И.&nbsp;Сафонова
+                    .header__logo-season
+                        +picture('header-season', 'png', 110, 35)
+            .header__navs-wrapper
+                nav.header__main-nav
+                    a(href="#").header__main-nav-item.header__main-nav-item--highlighted Афиша и билеты
+                    a(href="#").header__main-nav-item Орган
+                    a(href="#").header__main-nav-item Оркестр
+                    a(href="#").header__main-nav-item Музей
+                    a(href="#").header__main-nav-item Детям
+                    a(href="#").header__main-nav-item Контакты
+                .header__secondary-nav-wrapper
+                    nav.header__secondary-nav
+                        .header__secondary-nav-item.header__secondary-nav-item--dropdown
+                            a(href="#").header__secondary-nav-item-title Филармония
+                            .header__dropdown-box
+                                a(href="#").header__dropdown-item История филармонии
+                                a(href="#").header__dropdown-item Наши достижения
+                                a(href="#").header__dropdown-item Вакансии
+                        .header__secondary-nav-item.header__secondary-nav-item--dropdown
+                            a(href="#").header__secondary-nav-item-title Залы
+                            .header__dropdown-box
+                                a(href="#").header__dropdown-item История филармонии
+                                a(href="#").header__dropdown-item Наши достижения
+                                a(href="#").header__dropdown-item Вакансии
+                        a(href="#").header__secondary-nav-item Репертуар
+                        a(href="#").header__secondary-nav-item Коллективы и солисты
+                        a(href="#").header__secondary-nav-item Галерея
+                        a(href="#").header__secondary-nav-item Проекты
+                        a(href="#").header__secondary-nav-item Новости
+                        a(href="#").header__secondary-nav-item Зрителям
+            .header__unfold-btn.js-unfold-nav
+                +icon('arrow-down')
+            .header__mobile-menu-toggle.js-open-mobile-menu
+                +icon('menu')

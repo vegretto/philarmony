@@ -1,0 +1,118 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--history
+        .top-block
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main НОВОСТИ И ЖУРНАЛ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item.current Новости #[span.num (6)]
+                            a(href="#").top-navigation__item Журнал #[span.num (3)]
+                            a(href="#").top-navigation__item Приглашаем #[span.num (2)]
+                            a(href="#").top-navigation__item О нас говорят #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Захватывающая история<br>длиной в #[span.h2-common--primary 126] лет
+        section.history-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .history-slider__wrapper
+                .history-slider__arrow-wrapper.history-slider__arrow-wrapper--prev
+                    .pretty-arrow.pretty-arrow--black.pretty-arrow--prev
+                        +icon('pretty-arrow-black')
+                    .history-slider__side-year 1852
+                .history-slider__arrow-wrapper.history-slider__arrow-wrapper--next
+                    .history-slider__side-year 1955
+                    .pretty-arrow.pretty-arrow--black.pretty-arrow--next
+                        +icon('pretty-arrow-black')
+                .history-slider.js-history-slider
+                    .history-slider__slide
+                        .history-slider__top-wrapper
+                            .history-slider__slide-year 1850
+                            .history-slider__img
+                                +pictureFancybox('history1', 'png', '580', '310', 'history')
+                        .history-slider__text Официальной датой рождения Филармонии считается 1895 год — это год постройки знаменитого Курортного зала в Кисловодске — главного здания Филармонии, а также год создания постоянного симфонического оркестра — ныне Академического симфонического оркестра им. В.И. Сафонова. Идея такого внушительного и высокоорганизованного концертного предприятия принадлежала выдающемуся отечественному музыканту Василию Ильичу Сафонову, в то время занимавшему пост директора Московской консерватории и председателя Московского Отделения Русского Музыкального общества и ведущего активную просветительскую деятельность.
+                    .history-slider__slide
+                        .history-slider__top-wrapper
+                            .history-slider__slide-year 1892
+                            .history-slider__img
+                                +pictureFancybox('history1', 'png', '580', '310', 'history')
+                        .history-slider__text Официальной датой рождения Филармонии считается 1895 год — это год постройки знаменитого Курортного зала в Кисловодске — главного здания Филармонии, а также год создания постоянного симфонического оркестра — ныне Академического симфонического оркестра им. В.И. Сафонова. Идея такого внушительного и высокоорганизованного концертного предприятия принадлежала выдающемуся отечественному музыканту Василию Ильичу Сафонову, в то время занимавшему пост директора Московской консерватории и председателя Московского Отделения Русского Музыкального общества и ведущего активную просветительскую деятельность.
+                    .history-slider__slide
+                        .history-slider__top-wrapper
+                            .history-slider__slide-year 1987
+                            .history-slider__img
+                                +pictureFancybox('history1', 'png', '580', '310', 'history')
+                        .history-slider__text Официальной датой рождения Филармонии считается 1895 год — это год постройки знаменитого Курортного зала в Кисловодске — главного здания Филармонии, а также год создания постоянного симфонического оркестра — ныне Академического симфонического оркестра им. В.И. Сафонова. Идея такого внушительного и высокоорганизованного концертного предприятия принадлежала выдающемуся отечественному музыканту Василию Ильичу Сафонову, в то время занимавшему пост директора Московской консерватории и председателя Московского Отделения Русского Музыкального общества и ведущего активную просветительскую деятельность.
+        .container
+            .h1-common.h1-common--black Филармония сегодня
+        section.festivals-block.festivals-block-scroll
+            .container
+                h3.h3-common.festivals-block__title.text-left Фестивали органной музыки
+                .festivals.festivals--scroll.js-swipe-scroll
+                    .festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    .festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+                    .festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    .festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+                    .festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    .festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+        section.news-block
+            .container
+                .section__top
+                    .section__title Другие новости филармонии
+                .news
+                    .row
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020

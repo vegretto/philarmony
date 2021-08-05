@@ -1,0 +1,55 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--playlists
+        .top-block
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Плейлисты филаромнии
+        section.playlists.playlists--page.mt-7
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .playlists__tag.playlists__tag--1 дома
+            .playlists__tag.playlists__tag--2 по дороге на работу
+            .playlists__tag.playlists__tag--3 во время прогулки
+            .container
+                h2.h2-common.playlists__title Слушайте вечную классику вместе с нами
+                .playlists__wrapper
+                    .playlists__item
+                        iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                    .playlists__item
+                        iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                    .playlists__item
+                        iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                    .playlists__item
+                        iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                    .playlists__item
+                        iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                    .playlists__item
+                        iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                .show-more.mb-0
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.big-links-block
+            .container
+                .big-links
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img1', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Откройте удивительный мир музыки ребенку
+                            .big-links__text.text-center Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img2', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Музей филармонии в Кисловодске
+                            .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда

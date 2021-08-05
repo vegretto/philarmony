@@ -1,0 +1,90 @@
+mixin icon(iconName)
+  svg(class="icon icon-" + iconName)
+    use(xlink:href="img/svg/sprite.svg#" + iconName)
+
+mixin picture(src, ext, width, height)
+  picture
+    source(data-srcset='img/' + src + '.webp' type="image/webp")
+    img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=('img/' + src + '.' + ext) alt='image' width=width height=height)
+
+mixin form-group(isDate, fgClass, type, classname, name, id, label, required, labelclass)
+  div(class=`form-group ${fgClass}`)
+    if (isDate)
+      label(for=id class=labelclass ) #{label}
+      div.datepicker-wrapper
+        input(class=classname type=type name=name id=id value=value readonly)
+    else if (type === "textarea")
+      label(for=id) #{label}
+      textarea(class=classname name=name id=id rows=rows required=required) #{value}
+    else if (type === "checkbox")
+      .custom-cb-badge.js-custom-cb
+      label(for=id class=labelclass) #{label}
+      input(class=classname type=type name=name id=id value=value required=required)
+    else if (type === "radio")
+      label(for=id class=labelclass) #{label}
+      input(class=classname type=type name=name id=id value=value required=required)
+    else
+      label(for=id class=labelclass ) #{label}
+      input(class=classname type=type name=name id=id value=value required=required)
+    if (required)
+      .error-message Это поле обязательно для заполнения
+
+mixin form-group-no-lb(isDate, fgClass, type, classname, name, id, label, required, labelclass, placeholder)
+  div(class=`form-group ${fgClass}`)
+    if (isDate)
+      label(for=id class=labelclass ) #{label}
+        input(class=classname type=type name=name id=id value=value placeholder=placeholder)
+        .datepicker-icon
+          div.datepicker-wrapper
+          +icon('calendar')
+    else if (type === "textarea")
+      textarea(class=classname name=name id=id rows=rows) #{value}
+    else if (type === "checkbox")
+      .custom-cb-badge.js-custom-cb
+      label(for=id class=labelclass)!= label
+      input(class=classname type=type name=name id=id value=value)
+    else if (type === "radio")
+      label(for=id class=labelclass) #{label}
+      input(class=classname type=type name=name id=id value=value)
+    else
+      input(class=classname type=type name=name id=id value=value placeholder=placeholder required=required)
+    if (required)
+      .error-message Это поле обязательно для заполнения
+
+
+mixin pictureFancybox(src, ext, width, height, dataFancyBox)
+  a(href='../../img/' + src + '.' + ext data-fancybox=dataFancyBox)
+    picture
+      source(data-srcset='img/' + src + '.webp' type="image/webp")
+      img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src='../../img/' + src + '.' + ext  alt='image' width=width height=height)
+
+mixin videoFancybox(src, ext, picSrc, picExt, width, height, picWidth, picHeight, dataFancyBox)
+  a(href='video/' + src + '.' + ext data-fancybox=dataFancyBox)
+    picture
+      source(data-srcset='img/' + picSrc + '.webp' type="image/webp")
+      img.lazyload(data-src=('img/' + src + '.' + picExt) alt='image' width=picWidth height=picHeight)
+  video(controls style="display:none" width=width height=height)
+    source(src='video/' + src + '.' + ext type="video/mp4")
+
+mixin videoFancyboxYT(src, picSrc, picExt, width, height, picWidth, picHeight, dataFancyBox)
+  a(href=src data-fancybox=dataFancyBox class="fancybox.iframe")
+    picture
+      source(data-srcset='img/' + picSrc + '.webp' type="image/webp")
+      img.lazyload(data-src=('img/' + picSrc + '.' + picExt) alt='image' width=picWidth height=picHeight)
+  video(controls style="display:none" width=width height=height)
+    source(src='video/' + src + '.' + ext type="video/mp4")
+
+mixin pictureSVG(src, ext, width, height)
+  img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=('img/svg/' + src + '.' + ext)  alt='image' width=width height=height)
+
+mixin pictureSVGAdaptive(src, width, height)
+  picture
+    source(data-srcset='img/' + src + '-sm.svg' media="(max-width: 768px)")
+    img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=('img/' + src + '.svg') alt='image' width=width height=height)
+
+mixin pictureAdaptive(src, ext, width, height)
+  picture
+    source(data-srcset='img/' + src + '-sm.webp'  type="image/webp" media="(max-width: 768px)")
+    source(data-srcset='img/' + src + '-sm.'+ ext media="(max-width: 768px)")
+    source(data-srcset='img/' + src + '.webp' type="image/webp")
+    img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=('img/' + src + '.' + ext) alt='image' width=width height=height)

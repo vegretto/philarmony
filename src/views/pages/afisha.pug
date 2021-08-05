@@ -1,0 +1,459 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--afisha
+        .top-block
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        a(href="#").breadcrumbs__item Залы филармонии
+                        .breadcrumbs__item Хлебные крошки
+            .container
+                h1.h1-common Афиша филармонии
+        section.filters
+            .container
+                .filters__top
+                    .filters__datepicker
+                        .filters__datepicker-month
+                            .filters__datepicker-month-item.js-toggle-active Все месяцы
+                            .filters__datepicker-month-item.js-toggle-active Январь
+                            .filters__datepicker-month-item.js-toggle-active Февраль
+                            .filters__datepicker-month-item.js-toggle-active Март
+                        .filters__datepicker-wrapper
+                            .common-arrow.common-arrow--prev
+                                +icon('arrow-down')
+                            .common-arrow.common-arrow--next
+                                +icon('arrow-down')
+                            .filters__datepicker-day-slider.js-datepicker-day-slider
+                                .filters__datepicker-day.filters__datepicker-day--breaker
+                                    .filters__datepicker-breaker-month Октябрь
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 23
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 24
+                                    .filters__datepicker-weekday вт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 25
+                                    .filters__datepicker-weekday ср
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 26
+                                    .filters__datepicker-weekday чт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 27
+                                    .filters__datepicker-weekday пт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 28
+                                    .filters__datepicker-weekday сб
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 29
+                                    .filters__datepicker-weekday вс
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 1
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 2
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 3
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day.filters__datepicker-day--breaker
+                                    .filters__datepicker-breaker-month Март
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 2
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 3
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 4
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 5
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 23
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 24
+                                    .filters__datepicker-weekday вт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 25
+                                    .filters__datepicker-weekday ср
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 26
+                                    .filters__datepicker-weekday чт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 27
+                                    .filters__datepicker-weekday пт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 28
+                                    .filters__datepicker-weekday сб
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 29
+                                    .filters__datepicker-weekday вс
+                                .filters__datepicker-day.filters__datepicker-day--breaker
+                                    .filters__datepicker-breaker-month Сентябрь
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 1
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 2
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 3
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 4
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 5
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day.filters__datepicker-day--breaker
+                                    .filters__datepicker-breaker-month Февраль
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 23
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 24
+                                    .filters__datepicker-weekday вт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 25
+                                    .filters__datepicker-weekday ср
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 26
+                                    .filters__datepicker-weekday чт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 27
+                                    .filters__datepicker-weekday пт
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 28
+                                    .filters__datepicker-weekday сб
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 29
+                                    .filters__datepicker-weekday вс
+                                .filters__datepicker-day.filters__datepicker-day--breaker
+                                    .filters__datepicker-breaker-month Апрель
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 1
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 2
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 3
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 4
+                                    .filters__datepicker-weekday пн
+                                .filters__datepicker-day
+                                    .filters__datepicker-num 5
+                                    .filters__datepicker-weekday пн
+                .filters__bottom
+                    .filters__bottom-left
+                        .filters__dropdowns
+                            .filters__dropdown
+                                .filters__open-dropdown.open-dropdown.js-open-dropdown Жанр
+                                    +icon('arrow-down')
+                                .filters__dropdown-box.dropdown.js-dropdown
+                                    .filters__dropdown-box-inner
+                                        .filters__item.js-toggle-active Органная музыка
+                                        .filters__item.js-toggle-active Симфонический оркестр
+                                        .filters__item.js-toggle-active Филармонический хор
+                                        .filters__item.js-toggle-active Музыкальный спектакль
+                                        .filters__item.js-toggle-active.disabled Экскурсии
+                            .filters__dropdown
+                                .filters__open-dropdown.open-dropdown.js-open-dropdown Время
+                                    +icon('arrow-down')
+                                .filters__dropdown-box.dropdown.js-dropdown
+                                    .filters__dropdown-box-inner
+                                        .filters__item.js-toggle-active Органная музыка
+                                        .filters__item.js-toggle-active Симфонический оркестр
+                                        .filters__item.js-toggle-active Органная музыка
+                                        .filters__item.js-toggle-active Симфонический оркестр
+                            .filters__dropdown.mobile-only
+                                .filters__open-dropdown.open-dropdown.js-open-dropdown Другое
+                                    +icon('arrow-down')
+                                .filters__dropdown-box.dropdown.js-dropdown
+                                    .filters__dropdown-box-inner
+                            .filters__item.mobile-move.js-toggle-active Интересно детям
+                            .filters__item.mobile-move.js-toggle-active Только в выходные
+                        .filters__cities
+                            .filters__item.js-toggle-active.filters__city Все города
+                            .filters__item.js-toggle-active.filters__city Кисловодск
+                            .filters__item.js-toggle-active.filters__city Ессентуки
+                            .filters__item.js-toggle-active.filters__city Пятигорск
+                            .filters__item.js-toggle-active.filters__city Железноводск
+                    .filters__bottom-right
+                        .filters__events-num
+                            span Выбрано событий:
+                            b  63
+                        .filters__clear.js-clear
+                            .filters__clear-icon
+                                +icon('close')
+                            | Сбросить фильтры (12)
+                        .filters__views
+                            .filters__view.active
+                                +icon('square')
+                            .filters__view
+                                +icon('squares')
+
+        section.events-block
+            .bg-wrapper
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                h2.h2-common.events-block__title События филармонии
+                .events
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15 марта
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                .events-horizontal
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                .show-more
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.seo-text
+            .container
+                h2.seo-text__title SEO-текст
+                .seo-text__text
+                    p Рады приветствовать Вас на сайте Северо-Кавказской государственной филармонии имени Василия Ильича Сафонова! Мы – одна из трех крупнейших филармоний России, знаменитая концертная организация с богатой историей и плеядой ярких артистов.
+                    p Филармония в переводе с греческого означает «любовь к гармонии». Это учреждение, организующее концерты, содействующее развитию и популяризации музыкального искусства.
+
+                    p Сайт будет интересен и полезен постоянной публике, и тем, кто впервые открывает для себя сказочный мир музыки.
+                    p Здесь Вы можете ознакомиться с нашими программами в разделе «Афиша», выбрать понравившийся концерт и оперативно приобрести лучшие места, узнать об истории создания того или иного события, коллективах и солистах.
+                    p До встречи в концертных залах филармонии!
+        section.big-links-block
+            .container
+                .big-links
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img1', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Откройте удивительный мир музыки ребенку
+                            .big-links__text.text-center Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img2', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Музей филармонии в Кисловодске
+                            .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда

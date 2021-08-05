@@ -1,0 +1,119 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--halls
+        .top-block.p-0
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main.current ЗАЛЫ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item Кисловодск #[span.num (6)]
+                            a(href="#").top-navigation__item Ессентуки #[span.num (3)]
+                            a(href="#").top-navigation__item Пятигорск #[span.num (2)]
+                            a(href="#").top-navigation__item Железноводск #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Залы филармонии
+                    .common-subtitle на Кавказских Минеральных Водах
+        section.halls
+            .container
+                .halls__items
+                    a(href="#").halls__item.halls__item--xl
+                        .bg-wrapper
+                            +picture('hall1', 'png', '1170', '380')
+                        .halls__item-name Зал им. В.  И. Сафонова
+                        .halls__item-city Кисловодск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+        section.seo-text
+            .container
+                h2.seo-text__title SEO-текст
+                .seo-text__text
+                    p Рады приветствовать Вас на сайте Северо-Кавказской государственной филармонии имени Василия Ильича Сафонова! Мы – одна из трех крупнейших филармоний России, знаменитая концертная организация с богатой историей и плеядой ярких артистов.
+                    p Филармония в переводе с греческого означает «любовь к гармонии». Это учреждение, организующее концерты, содействующее развитию и популяризации музыкального искусства.
+
+                    p Сайт будет интересен и полезен постоянной публике, и тем, кто впервые открывает для себя сказочный мир музыки.
+                    p Здесь Вы можете ознакомиться с нашими программами в разделе «Афиша», выбрать понравившийся концерт и оперативно приобрести лучшие места, узнать об истории создания того или иного события, коллективах и солистах.
+                    p До встречи в концертных залах филармонии!
+        section.big-links-block.pt-0
+            .container
+                .big-links
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img1', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Откройте удивительный мир музыки ребенку
+                            .big-links__text.text-center Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img2', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Музей филармонии в Кисловодске
+                            .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда

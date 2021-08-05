@@ -1,0 +1,101 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--persons
+        .top-block
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        a(href="#").top-navigation__main НОВОСТИ И ЖУРНАЛ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item.current Новости #[span.num (6)]
+                            a(href="#").top-navigation__item Журнал #[span.num (3)]
+                            a(href="#").top-navigation__item Приглашаем #[span.num (2)]
+                            a(href="#").top-navigation__item О нас говорят #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Коллективы и Солисты филармонии
+        section.main-person
+            .container
+                .main-person__inner
+                    .main-person__dignity Заслуженная артистка России
+                    .main-person__img
+                        +picture('person1', 'png')
+                    .main-person__info
+                        .main-person__name Светлана Бережная
+                        .main-person__job титулярный органист филармонии
+                        .common-btn.common-btn--arrow
+                            | Подробнее
+                            .common-btn__icon
+                                +icon('pretty-arrow')
+        section.persons-list
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .persons-list__items
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item1', 'png')
+                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item2', 'png')
+                        .persons-list__name Филармонический хор им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item1', 'png')
+                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item2', 'png')
+                        .persons-list__name Филармонический хор им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item1', 'png')
+                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
+                    a(href="#").persons-list__item
+                        .persons-list__img
+                            +picture('persons-item2', 'png')
+                        .persons-list__name Филармонический хор им. В.И. Сафонова
+        section.big-links-block.pt-0
+            .container
+                .big-links
+                    a(href="#").big-links__item.big-links__item--no-bg.big-links__item--black
+                        .big-links__content
+                            .big-links__title Солисты филармонии
+                            .big-links__icon
+                                +icon('pretty-arrow')
+        section.news-block
+            .container
+                .section__top
+                    .section__title Новости филармонии
+                .news
+                    .row
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020

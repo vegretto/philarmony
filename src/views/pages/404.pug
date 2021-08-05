@@ -1,0 +1,41 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--404
+        section.error
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg5', 'png', '1300', '480')
+            .container
+                .error__inner
+                    .error__num 404
+                    .error__content
+                        .error__title Фиаско!<br>Кажется, страница фальшивит
+                        .error__text Уже вызвали на подкрепление Людвига и Иоганна — они скоро все починят.
+                        .error__links
+                            .error__links-text А пока предлагаем прогуляться по сайту:
+                            .error__links-box
+                                a(href="#").common-btn.common-btn--blue Занимательная афиша
+                                a(href="#").common-btn.common-btn--white Главная страница
+                    .error__img
+                        +picture('404', 'png')
+        section.help-block
+            .container
+                .help-block__top
+                    h3.h3-common.help-block__title У вас вопрос<br>или нужна помощь?
+                    .help-block__text Обратитесь в кассы филармонии<br>или оставьте заявку на сайте.<br>Мы всегда отвечаем и рады помочь.
+                .help-block__bottom
+                    .contacts-block.contacts-block--black
+                        .contacts-block__item
+                            .contacts-block__city Кисловодск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                        .contacts-block__item
+                            .contacts-block__city Пятигорск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                        .contacts-block__item
+                            .contacts-block__city Ессентуки
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+                        .contacts-block__item
+                            .contacts-block__city Железноводск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+                    a(href="#").common-btn.common-btn--transparent Задать вопрос

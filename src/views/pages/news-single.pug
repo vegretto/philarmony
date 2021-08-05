@@ -1,0 +1,102 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--news-single
+        .top-block.p-0
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main НОВОСТИ И ЖУРНАЛ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item.current Новости #[span.num (6)]
+                            a(href="#").top-navigation__item Журнал #[span.num (3)]
+                            a(href="#").top-navigation__item Приглашаем #[span.num (2)]
+                            a(href="#").top-navigation__item О нас говорят #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+        section.main-img
+            +picture('news-single', 'png')
+        section.news-single
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .news-single__inner
+                    .news-single__date-wrapper
+                        .news-single__date 11.05.2020
+                    .typography
+                        h1.h1-common.h1-common--black.news-single__h1-title Мосты откроем!
+                        .lead Лид. Первый абзац текста/статьи, информативный отрывок, позволяющий захватить внимание читателя на материале. Внезапно, ключевые особенности структуры проекта могут быть объективно рассмотрены соответствующими инстанциями. Сторонники тоталитаризма в науке, вне зависимости от их уровня, должны быть призваны к ответу.
+                        h3.h3-common.news-single__h3-title.text-left Многострочный заголовок, длина которого иногда бывает так не кстати.
+                        h4.h4-common.news-single__h4-title.text-left Делаем заголовок нарочито длинным, чтобы убедится в правильном интерлиньяже
+                        p Рады приветствовать Вас на сайте Северо-Кавказской государственной филармонии имени Василия Ильича Сафонова! Мы – одна из трех крупнейших филармоний России, знаменитая концертная организация с богатой историей и плеядой ярких артистов.
+                        p Филармония в переводе с греческого означает «любовь к гармонии». Это учреждение, организующее концерты, содействующее развитию и популяризации музыкального искусства. Сайт будет интересен и полезен постоянной публике, и тем, кто впервые открывает для себя сказочный мир музыки.
+                        p Здесь Вы можете ознакомиться с нашими программами в разделе «Афиша», выбрать понравившийся концерт и оперативно приобрести лучшие места, узнать об истории создания того или иного события, коллективах и солистах.
+                        p До встречи в #[a(href="#") концертных залах] филармонии!
+        section.quote.quote--gradient
+            .container
+                .quote__box
+                    .gradient-block.gradient-block--yellow
+                    .gradient-block.gradient-block--blue
+                    +icon('quote')
+                    .quote__text Ощутите глубину звука,<br> величественность и магию органа.<br> Выступления в кафедральных<br>соборах мира
+                    .quote__author Светлана Бережная
+                    .quote__job Заслуженная артистка России
+        section.download-links
+            .container
+                .download-links__inner
+                    .download-links__item
+                        .download-links__icon
+                            +icon('pretty-arrow')
+                        .download-links__content
+                            .download-links__filename Правила посещения Федерального государственного бюджетного учреждения культуры
+                            a(href="#" target="_blank").download-links__link Скачать документ
+                    .download-links__item
+                        .download-links__icon
+                            +icon('pretty-arrow')
+                        .download-links__content
+                            .download-links__filename Правила посещения Федерального государственного бюджетного учреждения культуры
+                            a(href="#" target="_blank").download-links__link Скачать документ
+                    .download-links__item
+                        .download-links__icon
+                            +icon('pretty-arrow')
+                        .download-links__content
+                            .download-links__filename Правила посещения Федерального государственного бюджетного учреждения культуры
+                            a(href="#" target="_blank").download-links__link Скачать документ
+                    .download-links__item
+                        .download-links__icon
+                            +icon('pretty-arrow')
+                        .download-links__content
+                            .download-links__filename Правила посещения Федерального государственного бюджетного учреждения культуры
+                            a(href="#" target="_blank").download-links__link Скачать документ
+        section.news-block
+            .container
+                .section__top
+                    .section__title Другие новости филармонии
+                .news
+                    .row
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+                                    +picture('news1', 'png', '370', '300')
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020
+
+                        .col-3
+                            a(href="#").news__item
+                                .bg-wrapper
+
+                                .news__title Абонементы сезона зима-весна уже в продаже!
+                                .news__date 11.05.2020

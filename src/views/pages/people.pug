@@ -1,0 +1,295 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--people
+        .top-block
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+        section.main-person
+            .container
+                .main-person__inner.main-person__inner--people
+                    .main-person__info-left
+                        .main-person__job Дипломант международного конкурса
+                        .main-person__name Наталья Говорская
+                        .main-person__job сопрано
+                    .main-person__img
+                        +picture('person2', 'png')
+                    .main-person__info
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                        .common-btn.common-btn--arrow
+                            | Подробнее
+                            .common-btn__icon
+                                +icon('pretty-arrow')
+        section.events-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                h3.h3-common.events-block__title.text-left Ближайшие события#[span.num (8)]
+                .events-horizontal
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 ₽
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                .show-more.mb-0
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.gallery
+            .gallery-slider-wrapper
+                .pretty-arrow.pretty-arrow--top.pretty-arrow--prev
+                    +icon('pretty-arrow-black')
+                .pretty-arrow.pretty-arrow--top.pretty-arrow.pretty-arrow--next
+                    +icon('pretty-arrow-black')
+                .container
+                    h3.h3-common.gallery__title Галерея
+                .gallery-slider.js-gallery-slider
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+        section.events-block.events-block--scroll
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                h3.h3-common.events-block__title Репертуар Солиста
+                .events.events--scroll.events--repertoire.js-swipe-scroll
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+
+                            .events-item__additional-dates Ближайшее событие:  #[b 15 января 19:00]
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер вокально-инструментальной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                            .events-item__additional-dates Ближайшее событие:  #[b Пока неизвестно]
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+        section.other-people
+            .container
+                h3.h3-common.other-people__title Другие СОЛИСТЫ ФИЛАРМОНИИ
+                .other-people__items
+                    .other-people__item
+                        .other-people__item-img
+                            +picture('soloist1', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    .other-people__item
+                        .other-people__item-img
+                            +picture('soloist2', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    .other-people__item
+                        .other-people__item-img
+                            +picture('soloist3', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Светлана Бережная
+                            .other-people__item-job титулярный органист филармонии
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января

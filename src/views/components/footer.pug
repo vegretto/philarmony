@@ -1,0 +1,84 @@
+footer.footer
+    .container
+        .footer__subscribe
+            .bg-wrapper
+                +picture('footer-subscribe', 'png', '1170', '290')
+            .footer__subscribe-content
+                .footer__subscribe-top
+                    .footer__subscribe-title Следите за афишей филармонии
+                    .footer__subscribe-text Раз в месяц отправляем афишу с самыми интересными событиями. Не пропустите музыкальные премьеры и&nbsp;гастроли лучших музыкантов,театров и артистов России.
+                form.footer__subscribe-form
+                    +form-group-no-lb(false, 'form-group--text footer__subscribe-input', 'email', 'input-text', 'input-text', 'subscribe-mail', '', true, '', 'example@pochta.ru')
+                    button.common-btn.common-btn--blue.js-open-modal(type="submit" data-modal="modal-subscribe-complete") Следить за афишей
+        .footer__nav-wrappers
+            .footer__nav-wrapper.footer__nav-wrapper-left
+                .footer__nav-title.js-footer-dropdown.opened Афиша
+                    +icon('arrow-down')
+                nav.footer__nav.footer__nav--mobile-folded.footer__nav--mobile-unfolded
+                    .col-3.col-3--mobile-lg
+                        a(href="#").footer__nav-item Кисловодск
+                        a(href="#").footer__nav-item Ессентуки
+                        a(href="#").footer__nav-item Пятигорск
+                        a(href="#").footer__nav-item Железноводск
+                    .col-3
+                        a(href="#").footer__nav-item Органная музыка
+                        a(href="#").footer__nav-item Симфонический оркестр
+                        a(href="#").footer__nav-item Филармонический хор
+                        a(href="#").footer__nav-item Опера
+                    .col-3
+                        a(href="#").footer__nav-item Музыкальный спектакль
+                        a(href="#").footer__nav-item Камерная музыка
+                        a(href="#").footer__nav-item Детям
+            .footer__nav-wrapper.footer__nav-wrapper-right
+                .footer__nav-title.js-footer-dropdown Филармония
+                    +icon('arrow-down')
+                nav.footer__nav.footer__nav--mobile-folded
+                    .col-3
+                        a(href="#").footer__nav-item Залы
+                        a(href="#").footer__nav-item Репертуар
+                        a(href="#").footer__nav-item Коллективы и солисты
+                    .col-3
+                        a(href="#").footer__nav-item Проекты
+                        a(href="#").footer__nav-item Детям
+                        a(href="#").footer__nav-item Музей
+                    .col-3
+                        a(href="#").footer__nav-item Галерея
+                        a(href="#").footer__nav-item Новости
+                        a(href="#").footer__nav-item Зрителям
+
+        .footer__contacts
+            .contacts-block
+                .contacts-block__item
+                    .contacts-block__city Кисловодск
+                    a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                .contacts-block__item
+                    .contacts-block__city Пятигорск
+                    a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                .contacts-block__item
+                    .contacts-block__city Ессентуки
+                    a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+                .contacts-block__item
+                    .contacts-block__city Железноводск
+                    a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+            a(href="#").common-btn.common-btn--blue контакты
+        .footer__socials
+            .socials
+                a(href="#").socials__item
+                    +icon('vk')
+                a(href="#").socials__item
+                    +icon('facebook')
+                a(href="#").socials__item.socials__item--insta
+                    +icon('instagram')
+                a(href="#").socials__item
+                    +icon('odnoklassniki')
+                a(href="#").socials__item
+                    +icon('youtube')
+        .footer__bottom
+            .footer__copywrite © 2021 Северо-Кавказская государственная филармония им. В.И. Сафонова
+            .footer__langs
+                a(href="#").footer__lang.current Русский
+                a(href="#").footer__lang English
+            .footer__developers Разработка и продвижение сайта:
+                a(href="https://webelement.ru/")  WEBELEMENT
+
+

@@ -1,0 +1,275 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--museum
+        .top-block.p-0
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main ЗАЛЫ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item Кисловодск #[span.num (6)]
+                            a(href="#").top-navigation__item.current Ессентуки #[span.num (3)]
+                            a(href="#").top-navigation__item Пятигорск #[span.num (2)]
+                            a(href="#").top-navigation__item Железноводск #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+        section.hall-main-block
+            .bg-wrapper
+                +picture('museum', 'png', '1300', '448')
+            .hall-main-block__content
+                h1.h1-common.hall-main-block__title Музей филармонии В. И. Сафонова
+                .hall-main-block__address Адрес: г. Кисловодск, ул. К. Маркса, 3а
+                a(href="#how-to-get").hall-main-block__how-to-get.js-scroll-to Как добраться?
+        section.museum-info
+            .gradient-block.gradient-block--yellow
+            .gradient-block.gradient-block--blue
+            .museum-info__content
+                h3.h3-common.museum-info__title Добро пожаловать в музей филармонии!
+                .museum-info__text Музей филармонии — это место,<br>которое обязательно стоит посетить гостям и жителям Кавказских Минеральных Вод.
+        section.section-wrapper
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .events-block
+                .container
+                    h3.h3-common.events-block__title.text-left Ближайшие экскурсии #[span.num (8)]
+                    .events-horizontal
+                        a(href="#").events-item.events-item--horizontal
+                            .events-item__left
+                                .events-item__textdate Сегодня / Завтра
+                                .events-item__inner
+                                    .events-item__date 13
+                                    .events-item__day февраля / Сб
+                                    .events-item__time 19:00
+                                .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                            .events-item__middle
+                                .labels
+                                    .labels__label-top
+                                        .labels__label-premier Премьера
+                                    .labels__label-bottom
+                                        .labels__circle-label.labels__label-single
+                                            +picture('label-single', 'png', '74', '75')
+                                        .labels__circle-label.labels__label-kids
+                                            +picture('label-kids', 'png', '74', '75')
+                                .events-item__img
+                                    +picture('events1', 'png', '370', '270')
+                            .events-item__bottom
+                                .events-item__bottom-left
+                                    .events-item__title Фантазии барокко верните музыку
+                                    .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                    .events-item__bottom-left-wrapper
+                                        .events-item__inner-box
+                                            .events-item__city Кисловодск #[span |]
+                                            .events-item__hall Зал им. В.И. Сафонова
+                                        .events-item__bottom-box
+                                            .events-item__price 200–300 ₽
+                                .events-item__bottom-right
+                                    .events-item__inner
+                                        .events-item__type Вечер органной музыки
+                                        .events-item__duration 1 час 20 минут
+                                    .common-btn.common-btn--blue Билеты
+                        a(href="#").events-item.events-item--horizontal
+                            .events-item__left
+                                .events-item__textdate Сегодня / Завтра
+                                .events-item__inner
+                                    .events-item__date 13
+                                    .events-item__day февраля / Сб
+                                    .events-item__time 19:00
+                                .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                            .events-item__middle
+                                .labels
+                                    .labels__label-bottom
+                                        .labels__circle-label.labels__label-kids
+                                            +picture('label-kids', 'png', '74', '75')
+                                .events-item__img
+                                    +picture('events2', 'png', '370', '270')
+                            .events-item__bottom
+                                .events-item__bottom-left
+                                    .events-item__title Фантазии барокко верните музыку
+                                    .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                    .events-item__bottom-left-wrapper
+                                        .events-item__inner-box
+                                            .events-item__city Кисловодск #[span |]
+                                            .events-item__hall Зал им. В.И. Сафонова
+                                        .events-item__bottom-box
+                                            .events-item__price 200–300 ₽
+                                .events-item__bottom-right
+                                    .events-item__inner
+                                        .events-item__type Вечер органной музыки
+                                        .events-item__duration 1 час 20 минут
+                                    .common-btn.common-btn--blue Билеты
+                    .show-more.mb-0
+                        .show-more__inner
+                            .show-more__round-text#js-show-more-circle Показать больше
+                            .show-more__icon
+                                +icon('pretty-arrow')
+            .museum-why
+                .container
+                    h3.h3-common.museum-why__title О музее и экскурсиях
+                    .museum-why__subtitle Почему стоит посетить музей?
+                    .museum-why__box
+                        .common-circle.museum-why__circle.museum-why__circle1
+                            .common-circle__content.museum-why__circle-content Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        .common-circle.museum-why__circle.museum-why__circle2
+                            .common-circle__content.museum-why__circle-content Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        .common-circle.museum-why__circle.museum-why__circle3
+                            .common-circle__content.museum-why__circle-content Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        section.sticky-side-blocks
+            .container
+                h3.h3-common.sticky-side-blocks__title.text-left Первый зал
+            .sticky-side-blocks__box
+                .sticky-side-blocks__content
+                    .sticky-side-blocks__text
+                        p Созданный в конце 1965 года, музей Северо-Кавказской филармонии им. В.И. Сафонова уже более полувека является важным культурным центром г. Кисловодска и гордостью Филармонии. Три выставочных зала, более 10 тысяч уникальных экспонатов, 12 выставок в год – все это Музей.
+                        p Два музейных зала посвящены истории Курзала и биографии маэстро В.И. Сафонова. Здесь представлены подлинные документы, касающиеся жизни и творчества знаменитых музыкантов, артистов, певцов и культурных деятелей России, бывавших в Кисловодске и Курзале, как дореволюционного, так и советского периода. Особую ценность представляют подлинные документы семьи В.И. Сафонова: письма, семейные альбомы, фотографии, афиши, программы концертов и др. Бесценные экспонаты были подарены музею внуком великого музыканта и дирижера – Ильей Кирилловичем Сафоновым.
+                .sticky-side-blocks__img
+                    +picture('museum-hall1', 'png')
+            .container
+                h3.h3-common.sticky-side-blocks__title.text-right Второй зал
+            .sticky-side-blocks__box.sticky-side-blocks__box--inverted
+                .sticky-side-blocks__content
+                    .sticky-side-blocks__text
+                        p Созданный в конце 1965 года, музей Северо-Кавказской филармонии им. В.И. Сафонова уже более полувека является важным культурным центром г. Кисловодска и гордостью Филармонии. Три выставочных зала, более 10 тысяч уникальных экспонатов, 12 выставок в год – все это Музей.
+                        p Два музейных зала посвящены истории Курзала и биографии маэстро В.И. Сафонова. Здесь представлены подлинные документы, касающиеся жизни и творчества знаменитых музыкантов, артистов, певцов и культурных деятелей России, бывавших в Кисловодске и Курзале, как дореволюционного, так и советского периода. Особую ценность представляют подлинные документы семьи В.И. Сафонова: письма, семейные альбомы, фотографии, афиши, программы концертов и др. Бесценные экспонаты были подарены музею внуком великого музыканта и дирижера – Ильей Кирилловичем Сафоновым.
+                .sticky-side-blocks__img
+                    +picture('museum-hall2', 'png')
+        section.person.person--museum
+            .container
+                .person__left
+                    h3.h3-common.person__title.text-left Увлекательные экскурсии
+                    .person__text
+                        p В нашем музее работает лучший друг детей — экскурсовод Петр Петрович. Поэтому от нас никто не хочет уходить,
+                        p Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis
+                    a(href="#").common-btn.common-btn--yellow О музее
+                .person__img
+                    +picture('person-girl', 'png')
+                .person__right
+                    .person__name Светлана Константинова
+                    .person__job лучший экскурсовод<br>Государственной Филармонии
+        section.gallery
+            .gallery-slider-wrapper
+                .pretty-arrow.pretty-arrow--top.pretty-arrow--prev
+                    +icon('pretty-arrow-black')
+                .pretty-arrow.pretty-arrow--top.pretty-arrow.pretty-arrow--next
+                    +icon('pretty-arrow-black')
+                .container
+                    h3.h3-common.gallery__title Галерея музея
+                .gallery-slider.js-gallery-slider
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+        section.how-to-get#how-to-get
+            .container
+                h3.h3-common.how-to-get__main-title Как добраться до зала?
+                .how-to-get__box
+                    .how-to-get__col.how-to-get__left
+                        .how-to-get__icon
+                            +icon('marker')
+                        .how-to-get__content
+                            .how-to-get__content-box
+                                a(href="#").how-to-get__name Зал им. Сафонова:
+                                .how-to-get__address Кисловодск,  ул. К. Маркса, 3а
+                    .how-to-get__col.how-to-get__center
+                        .how-to-get__icon
+                            +icon('bus')
+                        .how-to-get__content
+                            .how-to-get__content-box
+                                .how-to-get__title В Кисловодске
+                                .how-to-get__text Зал находится в Курортном парке, недалеко от Нарзанной галереи.
+                            .how-to-get__content-box
+                                .how-to-get__subtitle Общественный транспорт
+                                .how-to-get__text
+                                    p До Курзала можно доехать на маршрутках:
+                                    p #[b 114]  — остановка «Остановка»
+                                    p #[b 115]  — остановка «Остановка»
+                    .how-to-get__col.how-to-get__right
+                        .how-to-get__icon
+                            +icon('train')
+                        .how-to-get__content
+                            .how-to-get__content-box
+                                .how-to-get__title Из других городов
+                                .how-to-get__text Доехать до Кисловодска удобнее всего на электричке.
+
+                .how-to-get__map.map-container#map-single(data-json="data/map-single.json")
+        section.other-halls
+            .container
+                h3.h3-common.other-halls__title Другие залы
+                .halls__items.halls__items--scroll.js-swipe-scroll
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall3', 'png', '370', '480')
+                        .halls__item-name Органный зал
+                        .halls__item-city Ессентуки
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall4', 'png', '370', '480')
+                        .halls__item-name Лермонтовская галерея
+                        .halls__item-city Пятигорск
+                    a(href="#").halls__item.halls__item--sm
+                        .bg-wrapper
+                            +picture('hall2', 'png', '370', '480')
+                        .halls__item-name Зал им. Ф. И. Шаляпина
+                        .halls__item-city Ессентуки
+        section.help-block
+            .container
+                .help-block__top
+                    h3.h3-common.help-block__title У вас вопрос<br>или нужна помощь?
+                    .help-block__text Обратитесь в кассы филармонии<br>или оставьте заявку на сайте.<br>Мы всегда отвечаем и рады помочь.
+                .help-block__bottom
+                    .contacts-block.contacts-block--black
+                        .contacts-block__item
+                            .contacts-block__city Кисловодск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                        .contacts-block__item
+                            .contacts-block__city Пятигорск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                        .contacts-block__item
+                            .contacts-block__city Ессентуки
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+                        .contacts-block__item
+                            .contacts-block__city Железноводск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+                    a(href="#").common-btn.common-btn--transparent Задать вопрос

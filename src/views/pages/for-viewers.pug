@@ -1,0 +1,82 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--for-viewers
+        .top-block
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main НОВОСТИ И ЖУРНАЛ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item.current Новости #[span.num (6)]
+                            a(href="#").top-navigation__item Журнал #[span.num (3)]
+                            a(href="#").top-navigation__item Приглашаем #[span.num (2)]
+                            a(href="#").top-navigation__item О нас говорят #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Зрителям
+        section.section-wrapper
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .for-viewers-disclaimer
+                    .for-viewers-disclaimer__subtitle Дорогие зрители
+                    .for-viewers-disclaimer__text
+                        p Пожалуйста, приходите на мероприятие заранее — за 25–30 минут.
+                        p Вы сможете оставить вещи в гардеробе, познакомиться с интерьерами залов. Если вы приобрели билеты со свободной рассадкой, вам удастся занять лучшие места.
+            .big-links-block.p-0
+                .container
+                    .big-links
+                        a(href="#").big-links__item.big-links__item--no-bg.big-links__item--black
+                            .big-links__content
+                                .big-links__title Покупка и возврат билетов
+                                .big-links__icon
+                                    +icon('pretty-arrow')
+                        a(href="#").big-links__item.big-links__item--no-bg.big-links__item--yellow
+                            .big-links__content
+                                .big-links__title Правила посещения филармонии
+                                .big-links__icon
+                                    +icon('pretty-arrow')
+                    .small-links
+                        a(href="#").small-links__item.small-links__item-4
+                            .small-links__title Независимая оценка качества
+                        a(href="#").small-links__item.small-links__item-4
+                            .small-links__title Доступная среда
+                        a(href="#").small-links__item.small-links__item-4
+                            .small-links__title Партнеры
+                        a(href="#").small-links__item.small-links__item-4
+                            .small-links__title Официальные сведения
+                    .small-links.small-links--3
+                        a(href="#").small-links__item.small-links__item-3
+                            .small-links__title Противодействие коррупции
+                        a(href="#").small-links__item.small-links__item-3
+                            .small-links__title Соглашение пользователя
+                        a(href="#").small-links__item.small-links__item-3
+                            .small-links__title Политика конфиденциальности
+        section.help-block
+            .container
+                .help-block__top
+                    h3.h3-common.help-block__title У вас вопрос<br>или нужна помощь?
+                    .help-block__text Обратитесь в кассы филармонии<br>или оставьте заявку на сайте.<br>Мы всегда отвечаем и рады помочь.
+                .help-block__bottom
+                    .contacts-block.contacts-block--black
+                        .contacts-block__item
+                            .contacts-block__city Кисловодск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                        .contacts-block__item
+                            .contacts-block__city Пятигорск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87937) 2-04-22
+                        .contacts-block__item
+                            .contacts-block__city Ессентуки
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+                        .contacts-block__item
+                            .contacts-block__city Железноводск
+                            a(href="tel:+78793720422").contacts-block__phone 8 (87934) 6-75-56
+                    a(href="#").common-btn.common-btn--transparent Задать вопрос

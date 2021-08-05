@@ -1,0 +1,29 @@
+.main-wrapper--orchestra {
+  .sticky-side-blocks {
+    padding: 0 0 90px;
+    @media (max-width: 600px) {
+      padding: 0 0 30px;
+    }
+  }
+  .events-block {
+    padding: 90px 0 90px;
+    @media (max-width: 600px) {
+      padding: 30px 0;
+    }
+  }
+
+}.main-wrapper--organ {
+  .sticky-side-blocks {
+    padding: 0 0 90px;
+    @media (max-width: 600px) {
+      padding: 0 0 30px;
+    }
+  }
+  .events-block {
+    padding: 90px 0 90px;
+    @media (max-width: 600px) {
+      padding: 30px 0;
+    }
+  }
+
+}

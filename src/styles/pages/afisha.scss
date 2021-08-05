@@ -1,0 +1,29 @@
+.main-wrapper--afisha {
+  .big-links-block {
+    padding-top: 0;
+    @media (max-width: 600px) {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+
+.events-block {
+  padding: 40px 0 70px;
+  position: relative;
+  @media (max-width: 600px) {
+    padding: 20px 0 0px;
+    border-bottom: 0;
+  }
+  &__title {
+    margin-bottom: 30px;
+    .num {
+      @include font(24px, 100, 1, 'primary');
+    }
+  }
+  &--scroll {
+    .events-block__title {
+      text-align: left;
+    }
+  }
+}

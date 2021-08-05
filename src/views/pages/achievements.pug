@@ -1,0 +1,88 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--achievements
+        .top-block
+            .top-navigation
+                .container
+                    .top-navigation__inner
+                        .top-navigation__main НОВОСТИ И ЖУРНАЛ #[span.num (12)]
+                        .top-navigation__arrow
+                            +icon('pretty-arrow')
+                        .top-navigation__items
+                            a(href="#").top-navigation__item.current Новости #[span.num (6)]
+                            a(href="#").top-navigation__item Журнал #[span.num (3)]
+                            a(href="#").top-navigation__item Приглашаем #[span.num (2)]
+                            a(href="#").top-navigation__item О нас говорят #[span.num (1)]
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+            .container
+                .title-wrapper
+                    h1.h1-common Наши достижения
+        section.achievements
+            .container
+                .achievements__items
+                    .achievements__item
+                        +pictureFancybox('ach1', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach2', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach3', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach1', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach2', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach3', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach1', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach2', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach3', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach1', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach2', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach3', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                    .achievements__item
+                        +pictureFancybox('ach4', 'png', '', '', 'achievements')
+                .show-more
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.big-links-block.pt-0
+            .container
+                .big-links
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img1', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Откройте удивительный мир музыки ребенку
+                            .big-links__text.text-center Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы
+                    a(href="#").big-links__item
+                        .bg-wrapper
+                            +picture('link-img2', 'png', '567', '352')
+                        .big-links__content
+                            .big-links__title Музей филармонии в Кисловодске
+                            .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда

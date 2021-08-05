@@ -1,0 +1,315 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--repertoire-program
+        .top-block.p-0
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        a(href="#").breadcrumbs__item Залы филармонии
+                        .breadcrumbs__item Хлебные крошки
+        section.main-block.main-block--event.main-block--program
+            .main-block__item
+                .main-block__item-img
+                    +pictureAdaptive('main-slider2', 'png', '100%', '585')
+                .container
+                    .main-block__item-content
+                        .labels.labels--static
+                            .labels__label-bottom
+                                .labels__circle-label.labels__label-kids
+                                    +picture('label-kids', 'png', '74', '75')
+                        .main-block__event-type Вечер вокально-инструментальной музыки
+                        .main-block__event-name Верни мне музыку вторая строка
+                        .main-block__event-description Полная красочности, фантазий и лирического чувства<br>музыка Арно Бабаджаняна.
+        section.events-dates
+            .container
+                h3.h3-common.events-dates__title Даты события
+                .events-dates__items
+                    .events-dates__item
+                        .infobox-textdate Послезавтра
+                        .infobox-date 13 февраля #[span.text-light Cб]
+                        .infobox-time 19:00
+                        .infobox-place
+                            .infobox-city Кисловодск
+                            a(href="#").infobox-hall Зал им. В.И. Сафонова
+                        .infobox-price 600-2500 ₽
+                        a(href="#").common-btn.common-btn--yellow Купить билет
+                    .events-dates__item
+                        .infobox-date 13 февраля #[span.text-light Cб]
+                        .infobox-time 19:00
+                        .infobox-place
+                            .infobox-city Кисловодск
+                            a(href="#").infobox-hall Зал им. В.И. Сафонова
+                        .infobox-price 600-2500 ₽
+                        a(href="#").common-btn.common-btn--yellow Купить билет
+        section.event-info
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .row
+                    .col-6.event-info__about
+                        h3.h3-common.event-info__title О событии
+                        .read-more-wrapper.js-read-more-wrapper
+                            .event-info__description.read-more-container.js-read-more-container
+                                .event-info__subtitle Описание программы
+                                p Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна вновь зазвучит для вас в программе «Верни мне музыку».
+                                p В исполнении  солиста Северо-Кавказской филармонии им. В.И.Сафонова Лауреата международных конкурсов Сергея Майданова (баритон),  прозвучат  давно завоевавшие всенародную любовь, и по сей день, продолжающие находить искренний отклик в наших сердцах песни на слова Р. Рождественского, А. Вознесенского  и  Е. Евтушенко.
+                                p Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна вновь зазвучит для вас в программе «Верни мне музыку».
+                                p В исполнении  солиста Северо-Кавказской филармонии им. В.И.Сафонова Лауреата международных конкурсов Сергея Майданова (баритон),  прозвучат  давно завоевавшие всенародную любовь, и по сей день, продолжающие находить искренний отклик в наших сердцах песни на слова Р. Рождественского, А. Вознесенского  и  Е. Евтушенко.
+                        .read-more-toggle.js-read-more-toggle Читать далее
+                    .col-6.event-info__artists
+                        h3.h3-common.event-info__title исполняют
+                        .read-more-wrapper.js-read-more-wrapper
+                            .event-info__artists-inner.read-more-container.js-read-more-container
+                                .event-info__artists-item
+                                    .event-info__subtitle Коллектив
+                                    a(href="#").event-info__artist Филармонический хор
+                                .event-info__artists-item
+                                    .event-info__subtitle Программу ведет:
+                                    a(href="#").event-info__artist Роман Белышев
+                                .event-info__artists-item
+                                    .event-info__subtitle Солисты
+                                    a(href="#").event-info__artist Роман Аванесов
+                                    a(href="#").event-info__artist Александра Новикова
+                                    a(href="#").event-info__artist Дмитрий Аристов
+                                .event-info__artists-item
+                                    .event-info__subtitle Программу ведет:
+                                    a(href="#").event-info__artist Роман Белышев
+                                .event-info__artists-item
+                                    .event-info__subtitle Солисты
+                                    a(href="#").event-info__artist Роман Аванесов
+                                    a(href="#").event-info__artist Александра Новикова
+                                    a(href="#").event-info__artist Дмитрий Аристов
+                                .event-info__artists-item
+                                    .event-info__subtitle Программу ведет:
+                                    a(href="#").event-info__artist Роман Белышев
+                                .event-info__artists-item
+                                    .event-info__subtitle Солисты
+                                    a(href="#").event-info__artist Роман Аванесов
+                                    a(href="#").event-info__artist Александра Новикова
+                                    a(href="#").event-info__artist Дмитрий Аристов
+                        .read-more-toggle.js-read-more-toggle Показать всех
+                .row
+                    .col-6
+                        .event-info__programm
+                            .event-info__programm-title В программе прозвучат
+                            .event-info__programm-composers-box
+                                .event-info__programm-subtitle Композиторы
+                                .event-info__programm-composers Моцарт, Бах, Бетховен, Хачатурян, Брамс, Вивальди, Дебюсси
+                            .read-more-wrapper.js-read-more-wrapper
+                                .event-info__programm-compositions-box.read-more-container.js-read-more-container
+                                    .event-info__programm-subtitle Произведения
+                                    .event-info__programm-compositions
+                                        ul.ul-common
+                                            li Луи Николя Клерамбо – 3 части из сюиты 2-ого тона: Plein jeu; Duo; Basse de Cromorne
+                                            li Хуан Батиста Кабанильес – Corrente Italiana
+                                            li Бальдассаре Галуппи – Соната для органа соль минор
+                                            li Иоганн Готфрид Вальтер – Антонио Вивальди – Концерт для органа си минор в 3-х частях: Allegro-Adagio-Allegro
+                                            li Доминико Циполли – Пастораль
+                                            li Луи Николя Клерамбо – 3 части из сюиты 2-ого тона: Plein jeu; Duo; Basse de Cromorne
+                                            li Хуан Батиста Кабанильес – Corrente Italiana
+                                            li Бальдассаре Галуппи – Соната для органа соль минор
+                                            li Иоганн Готфрид Вальтер – Антонио Вивальди – Концерт для органа си минор в 3-х частях: Allegro-Adagio-Allegro
+                                            li Доминико Циполли – Пастораль
+                            .read-more-toggle.js-read-more-toggle Показать еще
+                    .col-6
+                        .event-info__playlist
+                            .playlists__slogan
+                                .playlists__slogan-icon
+                                    +icon('heart')
+                                .playlists__slogan-text Сохраняйте и слушайте плейлисты на Яндекс.Музыке
+                            .playlists__item
+                                iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+        section.gallery
+            .gallery-slider-wrapper
+                .pretty-arrow.pretty-arrow--top.pretty-arrow--prev
+                    +icon('pretty-arrow-black')
+                .pretty-arrow.pretty-arrow--top.pretty-arrow.pretty-arrow--next
+                    +icon('pretty-arrow-black')
+                .container
+                    h3.h3-common.gallery__title Галерея события
+                .gallery-slider.js-gallery-slider
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery1', 'png', '274', '377', 'gallery1')
+                    .gallery-slider__slide
+                        +pictureFancybox('event-gallery2', 'png', '306', '267', 'gallery1')
+                    .gallery-slider__slide.gallery-slider__slide--video
+                        .gallery-slider__video
+                            +icon('play')
+                        .gallery-slider__content
+                            .gallery-slider__video-title Видео
+                        +videoFancybox('product-card1', 'mp4', 'event-gallery-video', 'png',  '640', '360', '485', '318', 'gallery1')
+        section.events-block.events-block--scroll
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                h3.h3-common.events-block__title Похожие события
+                .events.events--scroll.js-swipe-scroll
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15 марта
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item
+                        .events-item__top
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__textdate Сегодня
+                                .events-item__inner
+                                    .events-item__date 13 февраля
+                                    .events-item__day Сб
+                                    .events-item__time 19:00
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__inner-box
+                                .events-item__city Кисловодск
+                                span |
+                                .events-item__hall Зал им. В.И. Сафонова
+                            .events-item__bottom-box
+                                .events-item__price 200–300 ₽
+                                .common-btn.common-btn--blue Билеты

@@ -1,0 +1,55 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--project-single
+        .top-block.p-0
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        .breadcrumbs__item Залы филармонии
+        section.main-img
+            +picture('proj1', 'png')
+        section.festival-info
+            .container
+                h1.h3-common.festival-info__title Фестиваль органной музыки Bach–fest
+                .festival-info__text
+                    p Рады приветствовать Вас на сайте Северо-Кавказской государственной филармонии имени Василия Ильича Сафонова! Мы – одна из трех крупнейших филармоний России, знаменитая концертная организация с богатой историей и плеядой ярких артистов.
+                    p Филармония в переводе с греческого означает «любовь к гармонии». Это учреждение, организующее концерты, содействующее развитию и популяризации музыкального искусства. Сайт будет интересен и полезен постоянной публике, и тем, кто впервые открывает для себя сказочный мир музыки.
+                    p Здесь Вы можете ознакомиться с нашими программами в разделе «Афиша», выбрать понравившийся концерт и оперативно приобрести лучшие места, узнать об истории создания того или иного события, коллективах и солистах.
+                    p До встречи в концертных залах филармонии!
+        section.festivals-block.festivals-block-scroll
+            .container
+                h3.h3-common.festivals-block__title.text-left Фестивали органной музыки
+                .festivals.festivals--scroll.js-swipe-scroll
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals1', 'png')
+                        .festivals__title Музыкальная раковина — музыка под открытым небом
+                        .festivals__subtitle Симфонический оркестр
+                    a(href="#").festivals__item
+                        .festivals__img
+                            +picture('festivals2', 'png')
+                        .festivals__title Фестиваль органной музыки «Органное созвездие»
+                        .festivals__subtitle Симфонический оркестр

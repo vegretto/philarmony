@@ -1,0 +1,220 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    main.main-wrapper.main-wrapper--repertoire
+        .top-block
+            .breadcrumbs
+                .container
+                    .breadcrumbs__inner
+                        a(href="#").breadcrumbs__item Главная
+                        a(href="#").breadcrumbs__item Залы филармонии
+                        .breadcrumbs__item Хлебные крошки
+            .container
+                h1.h1-common Репертуар филармонии
+        section.filters
+            .container
+                .filters__subtitle.mobile-hide Выбрать жанр:
+                .filters__dropdowns.mb-0
+                    .filters__dropdown.mobile-only
+                        .filters__open-dropdown.open-dropdown.js-open-dropdown Выбрать жанр
+                            +icon('arrow-down')
+                        .filters__dropdown-box.dropdown.js-dropdown
+                            .filters__dropdown-box-inner
+                    .filters__box
+                        .filters__item.mobile-move.js-toggle-active
+                            | Органная музыка
+                            span.filters__item-num (40)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Симфонический оркестр
+                            span.filters__item-num (20)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Филармонический хор
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Музыкальный спектакль
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Детский спектакль
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Камерные программы
+                            span.filters__item-num (10)
+                        .filters__item.mobile-move.js-toggle-active
+                            | Опера
+                            span.filters__item-num (10)
+        section.events-block
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .container
+                .events.events--repertoire
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+
+                            .events-item__additional-dates Ближайшее событие:  #[b 15 января 19:00]
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер вокально-инструментальной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Камерная программа / Хор / Оркестр
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Фантазии барокко
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+                            .events-item__additional-dates Ближайшее событие:  #[b Пока неизвестно]
+                    a(href="#").events-item
+                        .events-item__top
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                            .events-item__top-content
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                        .events-item__bottom
+                            .events-item__title Верни мне музыку
+                            .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                            .events-item__bottom-box
+                                .common-btn.common-btn--arrow
+                                    | Подробнее
+                                    .common-btn__icon
+                                        +icon('pretty-arrow')
+
+
+                .show-more
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
+        section.section-wrapper
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
+            .playlists
+                .playlists__tag.playlists__tag--1 дома
+                .playlists__tag.playlists__tag--2 по дороге на работу
+                .playlists__tag.playlists__tag--3 во время прогулки
+                .container
+                    h2.h2-common Слушайте вечную классику вместе с нами
+                    .playlists__wrapper
+                        .playlists__item
+                            iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                        .playlists__item
+                            iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                        .playlists__item
+                            iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
+                    .playlists__slogan
+                        .playlists__slogan-left
+                            .playlists__slogan-text1 Классика
+                            .playlists__slogan-text2 это современно
+                        .playlists__slogan-right
+                            a(href="#").common-btn.common-btn--blue Все плейлисты
+            .news-block
+                .container
+                    .section__top
+                        .section__title Новости филармонии
+                        a(href="#").common-btn.common-btn--yellow Все новости
+                    .news
+                        .row
+                            .col-3
+                                a(href="#").news__item
+                                    .bg-wrapper
+                                        +picture('news1', 'png', '370', '300')
+                                    .news__title Абонементы сезона зима-весна уже в продаже!
+                                    .news__date 11.05.2020
+
+                            .col-3
+                                a(href="#").news__item
+                                    .bg-wrapper
+                                        +picture('news1', 'png', '370', '300')
+                                    .news__title Абонементы сезона зима-весна уже в продаже!
+                                    .news__date 11.05.2020
+
+                            .col-3
+                                a(href="#").news__item
+                                    .bg-wrapper
+
+                                    .news__title Абонементы сезона зима-весна уже в продаже!
+                                    .news__date 11.05.2020

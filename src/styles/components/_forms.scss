@@ -1,0 +1,114 @@
+.form-group {
+  position: relative;
+}
+
+.error-message {
+  display: none;
+  position: absolute;
+  background-color: red;
+  color: #fff;
+  padding: 2px 1px;
+  font-size: 9px;
+  border-radius: 0;
+  border: 2px solid red;
+  bottom: 1px;
+  right: 0;
+  transform: translateY(100%);
+  width: auto;
+  z-index: 2;
+  line-height: 1;
+}
+
+.form-group--text {
+  margin-bottom: 1px;
+  width: 100%;
+  max-width: 400px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .custom-input {
+    position: relative;
+    background-color: #dadada;
+    padding: 35px 20px 20px;
+    border: none;
+    @include font(15px, 500, 1);
+    width: 100%;
+  }
+  label {
+    position: absolute;
+    z-index: 1;
+    @include font(11px, 300, 1);
+    color: #666666;
+    top: 10px;
+    left: 20px;
+  }
+  textarea {
+    height: 100%;
+  }
+}
+
+.form-group--textarea {
+  height: 100%;
+}
+
+.form-group--checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+  }
+  .custom-cb-badge {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    &:before {
+      @include pseudo(20px, 20px);
+      border: 1px solid #dddddd;
+      border-radius: 50%;
+      background-color: $white;
+      transition: 0.2s ease-in-out;
+    }
+    &:after {
+      @include pseudo(10px, 6px);
+      border-left: 2px solid $white;
+      border-bottom: 2px solid $white;
+      left: 5px;
+      top: 5px;
+      transform: rotate(-45deg);
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+    }
+  }
+  label {
+    @include font(12px, 500, 18px);
+    color: #666666;
+    cursor: pointer;
+    a {
+      @include font(12px, 500, 18px);
+      color: #666666;
+      text-decoration-color: #666666;
+    }
+  }
+  &.checked {
+    .custom-cb-badge {
+      &:before {
+        background-color: $yellow;
+        border-color: transparent;
+        transition: 0.2s ease-in-out;
+      }
+      &:after {
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}
