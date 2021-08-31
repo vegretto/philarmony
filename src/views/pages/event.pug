@@ -12,9 +12,7 @@ block content
                         .breadcrumbs__item Хлебные крошки
         section.main-block.main-block--event
             .main-block__item
-                .labels.labels--main-block
-                    .labels__label-top
-                        .labels__label-premier Премьера
+
                 .main-block__item-img
                     +pictureAdaptive('main-slider1', 'png', '100%', '585')
                 .container
@@ -25,7 +23,11 @@ block content
                                     +picture('label-single', 'png', '74', '75')
                                 .labels__circle-label.labels__label-kids
                                     +picture('label-kids', 'png', '74', '75')
-                        .main-block__event-type Вечер вокально-инструментальной музыки
+                        .main-block__labels-title-wrapper
+                            .labels.labels--main-block
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                            .main-block__event-type Вечер вокально-инструментальной музыки
                         .main-block__event-name Верни мне музыку вторая строка
                         .main-block__event-description Полная красочности, фантазий и лирического чувства<br>музыка Арно Бабаджаняна.
                     .main-block__infobox
@@ -33,7 +35,7 @@ block content
                             .main-block__infobox-date 13 февраля #[span.text-light Cб]
                             .main-block__infobox-time 19:00
                             .main-block__infobox-textdate Послезавтра
-                            .main-block__infobox-price 600-2500 ₽
+                            .main-block__infobox-price 600-2500 <span class="ruble">₽</span>
                         .main-block__infobox-bottom
                             .main-block__infobox-place
                                 .main-block__infobox-city Кисловодск
@@ -51,7 +53,7 @@ block content
                         .infobox-place
                             .infobox-city Кисловодск
                             a(href="#").infobox-hall Зал им. В.И. Сафонова
-                        .infobox-price 600-2500 ₽
+                        .infobox-price 600-2500 <span class="ruble">₽</span>
                         a(href="#").common-btn.common-btn--yellow Купить билет
                     .events-dates__item
                         .infobox-date 13 февраля #[span.text-light Cб]
@@ -59,7 +61,7 @@ block content
                         .infobox-place
                             .infobox-city Кисловодск
                             a(href="#").infobox-hall Зал им. В.И. Сафонова
-                        .infobox-price 600-2500 ₽
+                        .infobox-price 600-2500 <span class="ruble">₽</span>
                         a(href="#").common-btn.common-btn--yellow Купить билет
         section.event-info
             .bg-wrapper.bg-wrapper--no-of
@@ -179,6 +181,14 @@ block content
                             .how-to-get__content-box
                                 a(href="#").how-to-get__name Зал им. Сафонова:
                                 .how-to-get__address Кисловодск,  ул. К. Маркса, 3а
+                    .how-to-get__col.how-to-get__right
+                        .how-to-get__icon
+                            +icon('train')
+                        .how-to-get__content
+                            .how-to-get__content-box
+                                .how-to-get__title Из других городов
+                                .how-to-get__text Доехать до Кисловодска удобнее всего на электричке.
+
                     .how-to-get__col.how-to-get__center
                         .how-to-get__icon
                             +icon('bus')
@@ -192,14 +202,6 @@ block content
                                     p До Курзала можно доехать на маршрутках:
                                     p #[b 114]  — остановка «Остановка»
                                     p #[b 115]  — остановка «Остановка»
-                    .how-to-get__col.how-to-get__right
-                        .how-to-get__icon
-                            +icon('train')
-                        .how-to-get__content
-                            .how-to-get__content-box
-                                .how-to-get__title Из других городов
-                                .how-to-get__text Доехать до Кисловодска удобнее всего на электричке.
-
                 .how-to-get__map.map-container#map-single(data-json="data/map-single.json")
         section.help-block
             .container
@@ -256,7 +258,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                             .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15 марта
                     a(href="#").events-item
@@ -286,7 +288,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -312,7 +314,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -335,7 +337,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -358,7 +360,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -381,5 +383,5 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты

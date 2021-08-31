@@ -9,6 +9,18 @@
       margin-bottom: 15px;
     }
   }
+  &__title {
+    font-size: 40px;
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
+  }
+  &__datepicker {
+    margin-bottom: 55px;
+    @media (max-width: 600px) {
+      margin-bottom: 30px;
+    }
+  }
   &__datepicker-wrapper {
     position: relative;
     padding: 0 55px;
@@ -283,7 +295,9 @@
       border: none;
     }
     @media (max-width: 600px) {
+      flex-direction: row;
       align-items: center;
+      justify-content: space-between;
     }
   }
   &__events-num {

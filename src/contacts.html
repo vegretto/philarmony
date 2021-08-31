@@ -115,7 +115,7 @@
 							</section>
 							<section class="contacts-map">
 								<h3 class="h3-common contacts-map__title text-left">Адреса на карте</h3>
-								<div class="contacts-map__container map-container" id="map-multi" data-json="/data/map-multi.json"></div>
+								<div class="contacts-map__container map-container" id="map-multi" data-json="data/map-multi.json"></div>
 							</section>
 							<section class="contacts-socials" id="contacts-socials">
 								<h3 class="h3-common contacts-socials__title">Социальные сети</h3>
@@ -212,10 +212,10 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-group form-group--checkbox js-checkbox">
+									<div class="form-group form-group--checkbox js-checkbox checked">
 										<div class="custom-cb-badge js-custom-cb checked"></div>
 										<label class="custom-checkbox__label" for="checkbox-allow">Согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">Соглашением</a></label>
-										<input class="custom-checkbox" type="checkbox" name="checkbox-allow" id="checkbox-allow" required="required">
+										<input class="custom-checkbox" type="checkbox" name="checkbox-allow" id="checkbox-allow" required="required" checked="checked">
 										<div class="error-message">Это поле обязательно для заполнения</div>
 									</div>
 									<button class="common-btn common-btn--blue js-open-modal" data-modal="modal-write-us-complete">Отправить</button>
@@ -383,6 +383,12 @@
 				<div class="modal__text">
 					<p>Ждите интересных писем! А мы — ждем вас на музыкальных событиях филармонии.</p>
 				</div>
+			</div>
+		</div>
+		<div class="cookies-disclaimer show">
+			<div class="cookies-disclaimer__inner">
+				<div class="cookies-disclaimer__text">Мы используем cookie-файлы, чтобы вам было удобнее пользоваться нашим сайтом.</div>
+				<div class="cookies-disclaimer__btn js-close-cookie">Здорово!</div>
 			</div>
 		</div>
 		<div class="modal modal--write-us-complete" id="modal-write-us-complete">

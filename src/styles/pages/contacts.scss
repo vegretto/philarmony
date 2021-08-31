@@ -144,6 +144,11 @@
       height: 130px;
       background-color: $white;
       border: 1px solid #ddd;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+      }
       @media (max-width: 767px) {
         width: 55px;
         height: 55px;
@@ -263,7 +268,7 @@
   &__name {
     @include font(24px, 300, 30px, 'secondary');
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
   }
   &__phone {

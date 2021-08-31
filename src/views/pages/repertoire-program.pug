@@ -23,27 +23,81 @@ block content
                         .main-block__event-type Вечер вокально-инструментальной музыки
                         .main-block__event-name Верни мне музыку вторая строка
                         .main-block__event-description Полная красочности, фантазий и лирического чувства<br>музыка Арно Бабаджаняна.
-        section.events-dates
+        section.events-block.events-block--nw
+            .bg-wrapper.bg-wrapper--no-of
+                +picture('gradient-bg', 'png', '1300', '1400')
             .container
-                h3.h3-common.events-dates__title Даты события
-                .events-dates__items
-                    .events-dates__item
-                        .infobox-textdate Послезавтра
-                        .infobox-date 13 февраля #[span.text-light Cб]
-                        .infobox-time 19:00
-                        .infobox-place
-                            .infobox-city Кисловодск
-                            a(href="#").infobox-hall Зал им. В.И. Сафонова
-                        .infobox-price 600-2500 ₽
-                        a(href="#").common-btn.common-btn--yellow Купить билет
-                    .events-dates__item
-                        .infobox-date 13 февраля #[span.text-light Cб]
-                        .infobox-time 19:00
-                        .infobox-place
-                            .infobox-city Кисловодск
-                            a(href="#").infobox-hall Зал им. В.И. Сафонова
-                        .infobox-price 600-2500 ₽
-                        a(href="#").common-btn.common-btn--yellow Купить билет
+                h3.h3-common.text-left.events-block__title Ближайшие события #[span.num (8)]
+                .events-horizontal.events-horizontal--no-wrap
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-top
+                                    .labels__label-premier Премьера
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-single
+                                        +picture('label-single', 'png', '74', '75')
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events1', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                    a(href="#").events-item.events-item--horizontal
+                        .events-item__left
+                            .events-item__textdate Сегодня / Завтра
+                            .events-item__inner
+                                .events-item__date 13
+                                .events-item__day февраля / Сб
+                                .events-item__time 19:00
+                            .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15&nbsp;марта
+                        .events-item__middle
+                            .labels
+                                .labels__label-bottom
+                                    .labels__circle-label.labels__label-kids
+                                        +picture('label-kids', 'png', '74', '75')
+                            .events-item__img
+                                +picture('events2', 'png', '370', '270')
+                        .events-item__bottom
+                            .events-item__bottom-left
+                                .events-item__title Фантазии барокко верните музыку
+                                .events-item__description Полная красочности, фантазий и лирического чувства музыка Арно Бабаджаняна
+                                .events-item__bottom-left-wrapper
+                                    .events-item__inner-box
+                                        .events-item__city Кисловодск #[span |]
+                                        .events-item__hall Зал им. В.И. Сафонова
+                                    .events-item__bottom-box
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
+                            .events-item__bottom-right
+                                .events-item__inner
+                                    .events-item__type Вечер органной музыки
+                                    .events-item__duration 1 час 20 минут
+                                .common-btn.common-btn--blue Билеты
+                .show-more
+                    .show-more__inner
+                        .show-more__round-text#js-show-more-circle Показать больше
+                        .show-more__icon
+                            +icon('pretty-arrow')
         section.event-info
             .bg-wrapper.bg-wrapper--no-of
                 +picture('gradient-bg', 'png', '1300', '1400')
@@ -186,7 +240,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                             .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15 марта
                     a(href="#").events-item
@@ -216,7 +270,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -242,7 +296,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -265,7 +319,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -288,7 +342,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -311,5 +365,5 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты

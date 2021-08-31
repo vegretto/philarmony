@@ -123,6 +123,7 @@
     flex-basis: 280px;
     max-width: 280px;
     margin: 35px 7px;
+    box-shadow: 0 0 10px #ccc;
   }
   &__top {
     position: relative;
@@ -295,7 +296,7 @@
   }
   &__additional-dates {
     @include font(12px, 300, 1);
-    padding: 9px 15px;
+    padding: 9px 15px 9px 30px;
     width: 100%;
     background-color: $white;
     position: absolute;
@@ -328,7 +329,7 @@
     height: 270px;
     .events-item {
       &__left {
-        padding: 40px 30px 40px 50px;
+        padding: 40px 30px;
         background-color: $white;
         flex-basis: 200px;
         max-width: 200px;
@@ -482,6 +483,41 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+  }
+}
+
+.events--no-wrap {
+  flex-wrap: wrap;
+  overflow: initial;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 600px) {
+    margin: -10px 0;
+    padding-bottom: 10px;
+  }
+  .events-item {
+    @media (max-width: 600px) {
+      margin: 10px 0;
+    }
+  }
+}
+
+.events-horizontal--no-wrap {
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+    overflow: initial;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 600px) {
+    margin: -10px 0;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .events-item {
+    @media (max-width: 600px) {
+      margin: 10px 0;
     }
   }
 }

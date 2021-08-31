@@ -1,8 +1,14 @@
 .main-wrapper--museum {
   .gallery {
-    padding-top: 90px;
+    padding: 90px 0 45px;
     @media (max-width: 600px) {
-      padding-top: 30px;
+      padding: 15px 0 30px;
+    }
+  }
+  .other-halls {
+    padding: 45px 0 90px;
+    @media (max-width: 600px) {
+      padding: 15px 0 30px;
     }
   }
 }
@@ -20,6 +26,9 @@
   }
   &__title {
     margin-bottom: 20px;
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+    }
   }
   &__text {
     @include font(24px, 300, 36px);
@@ -33,6 +42,7 @@
 }
 
 .museum-why {
+  margin-top: 100px;
   &__title {
     margin-bottom: 30px;
   }

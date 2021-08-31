@@ -14,143 +14,145 @@ block content
                 h1.h1-common Афиша филармонии
         section.filters
             .container
+                .filters__datepicker
+                    //.filters__datepicker-month.js-toggle-active-one-minimum
+                    //    .filters__datepicker-month-item.js-toggle-active-all Все месяцы
+                    //    .filters__datepicker-month-item.js-toggle-active Январь
+                    //    .filters__datepicker-month-item.js-toggle-active Февраль
+                    //    .filters__datepicker-month-item.js-toggle-active Март
+                    .filters__datepicker-wrapper
+                        .common-arrow.common-arrow--prev
+                            +icon('arrow-down')
+                        .common-arrow.common-arrow--next
+                            +icon('arrow-down')
+                        .filters__datepicker-day-slider.js-datepicker-day-slider
+                            .filters__datepicker-day.filters__datepicker-day--breaker
+                                .filters__datepicker-breaker-month Октябрь
+                            .filters__datepicker-day
+                                .filters__datepicker-num 23
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 24
+                                .filters__datepicker-weekday вт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 25
+                                .filters__datepicker-weekday ср
+                            .filters__datepicker-day
+                                .filters__datepicker-num 26
+                                .filters__datepicker-weekday чт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 27
+                                .filters__datepicker-weekday пт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 28
+                                .filters__datepicker-weekday сб
+                            .filters__datepicker-day
+                                .filters__datepicker-num 29
+                                .filters__datepicker-weekday вс
+                            .filters__datepicker-day
+                                .filters__datepicker-num 1
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 2
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 3
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day.filters__datepicker-day--breaker
+                                .filters__datepicker-breaker-month Март
+                            .filters__datepicker-day
+                                .filters__datepicker-num 2
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 3
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 4
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 5
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 23
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 24
+                                .filters__datepicker-weekday вт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 25
+                                .filters__datepicker-weekday ср
+                            .filters__datepicker-day
+                                .filters__datepicker-num 26
+                                .filters__datepicker-weekday чт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 27
+                                .filters__datepicker-weekday пт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 28
+                                .filters__datepicker-weekday сб
+                            .filters__datepicker-day
+                                .filters__datepicker-num 29
+                                .filters__datepicker-weekday вс
+                            .filters__datepicker-day.filters__datepicker-day--breaker
+                                .filters__datepicker-breaker-month Сентябрь
+                            .filters__datepicker-day
+                                .filters__datepicker-num 1
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 2
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 3
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 4
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 5
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day.filters__datepicker-day--breaker
+                                .filters__datepicker-breaker-month Февраль
+                            .filters__datepicker-day
+                                .filters__datepicker-num 23
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 24
+                                .filters__datepicker-weekday вт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 25
+                                .filters__datepicker-weekday ср
+                            .filters__datepicker-day
+                                .filters__datepicker-num 26
+                                .filters__datepicker-weekday чт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 27
+                                .filters__datepicker-weekday пт
+                            .filters__datepicker-day
+                                .filters__datepicker-num 28
+                                .filters__datepicker-weekday сб
+                            .filters__datepicker-day
+                                .filters__datepicker-num 29
+                                .filters__datepicker-weekday вс
+                            .filters__datepicker-day.filters__datepicker-day--breaker
+                                .filters__datepicker-breaker-month Апрель
+                            .filters__datepicker-day
+                                .filters__datepicker-num 1
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 2
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 3
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 4
+                                .filters__datepicker-weekday пн
+                            .filters__datepicker-day
+                                .filters__datepicker-num 5
+                                .filters__datepicker-weekday пн
+                h2.h2-common.filters__title События филармонии
                 .filters__top
-                    .filters__datepicker
-                        .filters__datepicker-month
-                            .filters__datepicker-month-item.js-toggle-active Все месяцы
-                            .filters__datepicker-month-item.js-toggle-active Январь
-                            .filters__datepicker-month-item.js-toggle-active Февраль
-                            .filters__datepicker-month-item.js-toggle-active Март
-                        .filters__datepicker-wrapper
-                            .common-arrow.common-arrow--prev
-                                +icon('arrow-down')
-                            .common-arrow.common-arrow--next
-                                +icon('arrow-down')
-                            .filters__datepicker-day-slider.js-datepicker-day-slider
-                                .filters__datepicker-day.filters__datepicker-day--breaker
-                                    .filters__datepicker-breaker-month Октябрь
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 23
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 24
-                                    .filters__datepicker-weekday вт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 25
-                                    .filters__datepicker-weekday ср
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 26
-                                    .filters__datepicker-weekday чт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 27
-                                    .filters__datepicker-weekday пт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 28
-                                    .filters__datepicker-weekday сб
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 29
-                                    .filters__datepicker-weekday вс
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 1
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 2
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 3
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day.filters__datepicker-day--breaker
-                                    .filters__datepicker-breaker-month Март
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 2
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 3
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 4
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 5
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 23
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 24
-                                    .filters__datepicker-weekday вт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 25
-                                    .filters__datepicker-weekday ср
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 26
-                                    .filters__datepicker-weekday чт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 27
-                                    .filters__datepicker-weekday пт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 28
-                                    .filters__datepicker-weekday сб
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 29
-                                    .filters__datepicker-weekday вс
-                                .filters__datepicker-day.filters__datepicker-day--breaker
-                                    .filters__datepicker-breaker-month Сентябрь
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 1
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 2
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 3
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 4
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 5
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day.filters__datepicker-day--breaker
-                                    .filters__datepicker-breaker-month Февраль
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 23
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 24
-                                    .filters__datepicker-weekday вт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 25
-                                    .filters__datepicker-weekday ср
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 26
-                                    .filters__datepicker-weekday чт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 27
-                                    .filters__datepicker-weekday пт
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 28
-                                    .filters__datepicker-weekday сб
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 29
-                                    .filters__datepicker-weekday вс
-                                .filters__datepicker-day.filters__datepicker-day--breaker
-                                    .filters__datepicker-breaker-month Апрель
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 1
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 2
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 3
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 4
-                                    .filters__datepicker-weekday пн
-                                .filters__datepicker-day
-                                    .filters__datepicker-num 5
-                                    .filters__datepicker-weekday пн
+
                 .filters__bottom
                     .filters__bottom-left
                         .filters__dropdowns
@@ -180,8 +182,8 @@ block content
                                     .filters__dropdown-box-inner
                             .filters__item.mobile-move.js-toggle-active Интересно детям
                             .filters__item.mobile-move.js-toggle-active Только в выходные
-                        .filters__cities
-                            .filters__item.js-toggle-active.filters__city Все города
+                        .filters__cities.js-toggle-active-one-minimum
+                            .filters__item.js-toggle-active-all.filters__city Все города
                             .filters__item.js-toggle-active.filters__city Кисловодск
                             .filters__item.js-toggle-active.filters__city Ессентуки
                             .filters__item.js-toggle-active.filters__city Пятигорск
@@ -200,12 +202,12 @@ block content
                             .filters__view
                                 +icon('squares')
 
+
         section.events-block
             .bg-wrapper
                 +picture('gradient-bg', 'png', '1300', '1400')
             .container
-                h2.h2-common.events-block__title События филармонии
-                .events
+                .events.events--no-wrap
                     a(href="#").events-item
                         .events-item__top
                             .labels
@@ -235,7 +237,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                             .events-item__additional-dates #[b Все даты:] 5, 8, 10 февраля, 15 марта
                     a(href="#").events-item
@@ -265,7 +267,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -291,7 +293,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -314,7 +316,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -337,7 +339,7 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
                     a(href="#").events-item
                         .events-item__top
@@ -360,9 +362,9 @@ block content
                                 span |
                                 .events-item__hall Зал им. В.И. Сафонова
                             .events-item__bottom-box
-                                .events-item__price 200–300 ₽
+                                .events-item__price 200–300 <span class="ruble">₽</span>
                                 .common-btn.common-btn--blue Билеты
-                .events-horizontal
+                .events-horizontal.events-horizontal--no-wrap
                     a(href="#").events-item.events-item--horizontal
                         .events-item__left
                             .events-item__textdate Сегодня / Завтра
@@ -391,7 +393,7 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
@@ -421,7 +423,7 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
@@ -432,16 +434,6 @@ block content
                         .show-more__round-text#js-show-more-circle Показать больше
                         .show-more__icon
                             +icon('pretty-arrow')
-        section.seo-text
-            .container
-                h2.seo-text__title SEO-текст
-                .seo-text__text
-                    p Рады приветствовать Вас на сайте Северо-Кавказской государственной филармонии имени Василия Ильича Сафонова! Мы – одна из трех крупнейших филармоний России, знаменитая концертная организация с богатой историей и плеядой ярких артистов.
-                    p Филармония в переводе с греческого означает «любовь к гармонии». Это учреждение, организующее концерты, содействующее развитию и популяризации музыкального искусства.
-
-                    p Сайт будет интересен и полезен постоянной публике, и тем, кто впервые открывает для себя сказочный мир музыки.
-                    p Здесь Вы можете ознакомиться с нашими программами в разделе «Афиша», выбрать понравившийся концерт и оперативно приобрести лучшие места, узнать об истории создания того или иного события, коллективах и солистах.
-                    p До встречи в концертных залах филармонии!
         section.big-links-block
             .container
                 .big-links
@@ -457,3 +449,13 @@ block content
                         .big-links__content
                             .big-links__title Музей филармонии в Кисловодске
                             .big-links__text На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда
+        section.seo-text
+            .container
+                h2.seo-text__title SEO-текст
+                .seo-text__text
+                    p Рады приветствовать Вас на сайте Северо-Кавказской государственной филармонии имени Василия Ильича Сафонова! Мы – одна из трех крупнейших филармоний России, знаменитая концертная организация с богатой историей и плеядой ярких артистов.
+                    p Филармония в переводе с греческого означает «любовь к гармонии». Это учреждение, организующее концерты, содействующее развитию и популяризации музыкального искусства.
+
+                    p Сайт будет интересен и полезен постоянной публике, и тем, кто впервые открывает для себя сказочный мир музыки.
+                    p Здесь Вы можете ознакомиться с нашими программами в разделе «Афиша», выбрать понравившийся концерт и оперативно приобрести лучшие места, узнать об истории создания того или иного события, коллективах и солистах.
+                    p До встречи в концертных залах филармонии!

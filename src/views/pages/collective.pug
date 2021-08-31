@@ -61,7 +61,7 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
@@ -91,13 +91,13 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
                                     .events-item__duration 1 час 20 минут
                                 .common-btn.common-btn--blue Билеты
-                .show-more.mb-0
+                .show-more.mb-0.tablet-hide
                     .show-more__inner
                         .show-more__round-text#js-show-more-circle Показать больше
                         .show-more__icon
@@ -143,7 +143,7 @@ block content
             .bg-wrapper.bg-wrapper--no-of
                 +picture('gradient-bg', 'png', '1300', '1400')
             .container
-                h3.h3-common.events-block__title Репертуар Солиста
+                h3.h3-common.events-block__title Репертуар коллектива
                 .events.events--scroll.events--repertoire.js-swipe-scroll
                     a(href="#").events-item
                         .events-item__top
@@ -263,6 +263,7 @@ block content
             .bg-wrapper.bg-wrapper--no-of
                 +picture('gradient-bg', 'png', '1300', '1400')
             .container
+                h3.h3-common.persons-list__title Другие коллективы
                 .persons-list__items
                     a(href="#").persons-list__item.persons-list__item--sm
                         .persons-list__img

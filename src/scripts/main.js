@@ -95,6 +95,7 @@ $(document).ready(function () {
         prevArrow: $('.history-slider__wrapper .history-slider__arrow-wrapper--prev'),
         nextArrow: $('.history-slider__wrapper .history-slider__arrow-wrapper--next'),
         speed: 350,
+        adaptiveHeight: true,
     });
 
     $('.js-history-slider').on('afterChange', function(){
@@ -272,7 +273,6 @@ $(document).ready(function () {
         checkLoadMap();
     }
 
-
     /*--END Maps--*/
 
 
@@ -316,12 +316,11 @@ $(document).ready(function () {
     }
     if (screen.width <= 600) {
         if ($('.history-slider').length > 0) {
-            $('.history-slider__arrow-wrapper').css('top', $('.history-slider__img').position().top + $('.history-slider__img').height() + 50)
+            $('.history-slider__arrow-wrapper').css('top', $('.history-slider__img').position().top + $('.history-slider__img').height() - 20)
             $(window).on('resize', function () {
                 clearTimeout(window.resizedFinished);
                 window.resizedFinished = setTimeout(function () {
-                    console.log(123);
-                    $('.history-slider__arrow-wrapper').css('top', $('.history-slider__img').position().top + $('.history-slider__img').height() + 50)
+                    $('.history-slider__arrow-wrapper').css('top', $('.history-slider__img').position().top + $('.history-slider__img').height() + 65)
                 }, 250);
             })
         }
@@ -366,8 +365,7 @@ $(document).ready(function () {
     moveElement('.events-item__type', '.events-item__bottom', 600, false);
     moveElement('.events-item__duration', '.events-item__title', 600, false, true);
     moveElement('.filters__item.mobile-move', '.filters__dropdown.mobile-only .filters__dropdown-box-inner', 600);
-    moveElement('.filters__events-num', '.filters__dropdowns', 600);
-    $('.filters__events-num span').text('Событий:');
+    moveElement('.filters__events-num', '.filters__bottom-right', 600, false);
     moveElement('.labels--main-block', '.main-block__item-img', 767);
     moveElement('.main-block--event .labels--static', '.main-block__item-img', 767);
     moveElement('.main-block--event .main-block__infobox-price', '.main-block__infobox-duration', 767, false, true);
@@ -381,6 +379,9 @@ $(document).ready(function () {
     moveElement('.events-item--horizontal .events-item__additional-dates', '.events-item--horizontal .events-item__bottom', 991, true );
     moveElement('.events-item--horizontal .common-btn--blue', '.events-item--horizontal .events-item__bottom-box', 991, true );
     moveElement('.main-person__dignity', '.main-person__info', 991, false );
+    moveElement('.main-block__infobox-duration', '.main-block__infobox-top', 767, true );
+    moveElement('.history-slider__slide-year', '.history-slider__img', 991, false, true );
+    moveElement('.event-info__artists', '.event-info__programm', 991, false, true );
 
 
     let checkVisible = (elem, eventName, callback) => {
@@ -468,7 +469,20 @@ $(document).ready(function () {
     })
 
     $('.js-toggle-active').on('click', function () {
-       $(this).toggleClass('active');
+        if ($(this).parent().hasClass('js-toggle-active-one-minimum')) {
+            if (!$(this).hasClass('active') || $(this).parent().find('.js-toggle-active.active').length !== 1) {
+                $(this).toggleClass('active');
+                $(this).parent().find('.js-toggle-active-all').removeClass('active');
+            }
+        }
+        else {
+            $(this).toggleClass('active');
+        }
+    });
+
+    $('.js-toggle-active-all').on('click', function () {
+        $(this).parent().find('.js-toggle-active').removeClass('active');
+        $(this).toggleClass('active');
     });
 
     $('.filters__view').on('click', function () {
@@ -516,18 +530,24 @@ $(document).ready(function () {
             $(this).removeClass('selected')
         }
     });
+    let initialBtnText;
+    let initialStartHeight;
     $('.js-read-more-toggle').on('click', function () {
         let initHeight = $(this).prev('.js-read-more-wrapper').find($('.js-read-more-container')).height();
         if (!$(this).hasClass('opened')) {
+            initialBtnText = $(this).text();
+            initialStartHeight = $(this).prev('.js-read-more-wrapper').height();
             $(this).prev('.js-read-more-wrapper').animate({
                 height: initHeight
             }, 300);
             $(this).addClass('opened');
+            $(this).text('Скрыть');
         } else {
             $(this).prev('.js-read-more-wrapper').animate({
-                height: 220
+                height: initialStartHeight,
             }, 300);
             $(this).removeClass('opened');
+            $(this).text(initialBtnText);
         }
     });
 
@@ -644,6 +664,35 @@ $(document).ready(function () {
     if ($('.js-scroll-watch').length > 0) {
         watchScroll($('.js-scroll-watch'));
     }
+
+    $('.js-close-cookie').on('click', function () {
+       $('.cookies-disclaimer').removeClass('show');
+    });
+
+    let elements = document.querySelectorAll("input[type='tel']");
+    elements.forEach(function (element) {
+        let dynamicMask = IMask(element, {
+            mask: [
+                {
+                    mask: '+{7}(#00)000-00-00',
+                    definitions: {
+                        '#': /[12345690]/
+                    }
+                },
+                {
+                    mask: '{#}(000)000-00-00',
+                    definitions: {
+                        '#': /[8]/
+                    }
+                },{
+                    mask: '{+#}(000)000-00-00',
+                    definitions: {
+                        '#': /[+7]/
+                    }
+                },
+            ]
+        });
+    })
 });
 
 

@@ -11,19 +11,19 @@ block content
                         .breadcrumbs__item Залы филармонии
         section.main-person
             .container
+                h1.h1-common.main-person__title Наталья Говорская
                 .main-person__inner.main-person__inner--people
-                    .main-person__info-left
-                        .main-person__job Дипломант международного конкурса
-                        .main-person__name Наталья Говорская
-                        .main-person__job сопрано
                     .main-person__img
                         +picture('person2', 'png')
                     .main-person__info
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                        .common-btn.common-btn--arrow
-                            | Подробнее
-                            .common-btn__icon
-                                +icon('pretty-arrow')
+                        .main-person__job Дипломант международного конкурса
+                        .main-person__job сопрано
+                        .read-more-wrapper.js-read-more-wrapper
+                            .read-more-container.js-read-more-container
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                        .read-more-toggle.js-read-more-toggle Подробнее
         section.events-block
             .bg-wrapper.bg-wrapper--no-of
                 +picture('gradient-bg', 'png', '1300', '1400')
@@ -58,7 +58,7 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
@@ -88,7 +88,7 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
@@ -252,7 +252,7 @@ block content
             .container
                 h3.h3-common.other-people__title Другие СОЛИСТЫ ФИЛАРМОНИИ
                 .other-people__items
-                    .other-people__item
+                    a(href="#").other-people__item
                         .other-people__item-img
                             +picture('soloist1', 'png')
                         .other-people__item-content
@@ -266,7 +266,7 @@ block content
                                 .other-people__item-box
                                     .other-people__item-text-sm Ближайшее событие:
                                     .other-people__item-text-val 15 января
-                    .other-people__item
+                    a(href="#").other-people__item
                         .other-people__item-img
                             +picture('soloist2', 'png')
                         .other-people__item-content
@@ -280,7 +280,7 @@ block content
                                 .other-people__item-box
                                     .other-people__item-text-sm Ближайшее событие:
                                     .other-people__item-text-val 15 января
-                    .other-people__item
+                    a(href="#").other-people__item
                         .other-people__item-img
                             +picture('soloist3', 'png')
                         .other-people__item-content

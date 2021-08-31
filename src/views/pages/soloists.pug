@@ -2,7 +2,7 @@ extends ../layout
 include ../mixins/mixins
 
 block content
-    main.main-wrapper.main-wrapper--halls
+    main.main-wrapper.main-wrapper--soloists
         .top-block
             .top-navigation
                 .container
@@ -21,32 +21,129 @@ block content
             .container
                 .title-wrapper
                     h1.h1-common Солисты филармонии
-        section.persons-list
-            .bg-wrapper.bg-wrapper--no-of
-                +picture('gradient-bg', 'png', '1300', '1400')
+        section.other-people.other-people--gray-bg
             .container
-                .persons-list__items
-                    a(href="#").persons-list__item
-                        .persons-list__img
-                            +picture('persons-item1', 'png')
-                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
-                    a(href="#").persons-list__item
-                        .persons-list__img
-                            +picture('persons-item2', 'png')
-                        .persons-list__name Филармонический хор им. В.И. Сафонова
-                    a(href="#").persons-list__item
-                        .persons-list__img
-                            +picture('persons-item1', 'png')
-                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
-                    a(href="#").persons-list__item
-                        .persons-list__img
-                            +picture('persons-item2', 'png')
-                        .persons-list__name Филармонический хор им. В.И. Сафонова
-                    a(href="#").persons-list__item
-                        .persons-list__img
-                            +picture('persons-item1', 'png')
-                        .persons-list__name Академический Симфонический Оркестр им. В.И. Сафонова
-                    a(href="#").persons-list__item
-                        .persons-list__img
-                            +picture('persons-item2', 'png')
-                        .persons-list__name Филармонический хор им. В.И. Сафонова
+                .other-people__items
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist1', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist2', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist3', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Светлана Бережная
+                            .other-people__item-job титулярный органист филармонии
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist1', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist2', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist3', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Светлана Бережная
+                            .other-people__item-job титулярный органист филармонии
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist1', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist2', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Наталья Говорская
+                            .other-people__item-job Дипломант международного конкурса
+                            .other-people__item-voice сопрано
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января
+                    a(href="#").other-people__item
+                        .other-people__item-img
+                            +picture('soloist3', 'png')
+                        .other-people__item-content
+                            .other-people__item-name Светлана Бережная
+                            .other-people__item-job титулярный органист филармонии
+                            .other-people__item-bottom
+                                .other-people__item-box
+                                    .other-people__item-text-sm Программы:
+                                    .other-people__item-text-val 15
+                                .other-people__item-box
+                                    .other-people__item-text-sm Ближайшее событие:
+                                    .other-people__item-text-val 15 января

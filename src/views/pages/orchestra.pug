@@ -78,7 +78,7 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
@@ -108,13 +108,13 @@ block content
                                         .events-item__city Кисловодск #[span |]
                                         .events-item__hall Зал им. В.И. Сафонова
                                     .events-item__bottom-box
-                                        .events-item__price 200–300 ₽
+                                        .events-item__price 200–300 <span class="ruble">₽</span>
                             .events-item__bottom-right
                                 .events-item__inner
                                     .events-item__type Вечер органной музыки
                                     .events-item__duration 1 час 20 минут
                                 .common-btn.common-btn--blue Билеты
-                .show-more.mb-0
+                .show-more.mb-0.tablet-hide
                     .show-more__inner
                         .show-more__round-text#js-show-more-circle Показать больше
                         .show-more__icon
@@ -137,9 +137,7 @@ block content
                 .quote__box
                     .gradient-block.gradient-block--yellow
                     .gradient-block.gradient-block--blue
-                    +icon('quote')
-                    .quote__text Музыка является самым чудодейственным, самым тонким средством привлечения к добру, красоте, человечности.<br>Чувство красоты музыкальной мелодии открывает перед ребенком собственную красоту
-                    .quote__author В. А. Сухомлинский
+                    .quote__text.quote__text--simple Музыка является самым чудодейственным, самым тонким средством привлечения к добру, красоте, человечности.<br>Чувство красоты музыкальной мелодии открывает перед ребенком собственную красоту
         section.sticky-side-blocks
             .container
                 h3.h3-common.sticky-side-blocks__title.text-left Орган «Walker»
@@ -192,7 +190,7 @@ block content
             .bg-wrapper.bg-wrapper--no-of
                 +picture('gradient-bg', 'png', '1300', '1400')
             .container
-                h3.h3-common.events-block__title Репертуар Солиста
+                h3.h3-common.events-block__title Репертуар оркерстра
                 .events.events--scroll.events--repertoire.js-swipe-scroll
                     a(href="#").events-item
                         .events-item__top

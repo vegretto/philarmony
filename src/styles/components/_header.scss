@@ -20,6 +20,9 @@
     @media (max-width: 991px) {
       align-items: center;
     }
+    @media (max-width: 600px) {
+      justify-content: space-between;
+    }
   }
   &__logo-box {
     padding: 15px 0;
@@ -34,6 +37,8 @@
     @media (max-width: 600px) {
       padding: 5px 0;
       margin-right: 0;
+      flex-basis: auto;
+      max-width: none;
     }
   }
   &__logo-descriptor {
@@ -70,6 +75,9 @@
   &__navs-wrapper {
     @media (max-width: 991px) {
       margin: 0 10px 0 auto;
+    }
+    @media (max-width: 600px) {
+      margin-left: 10px;
     }
   }
   &__main-nav {

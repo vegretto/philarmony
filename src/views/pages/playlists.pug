@@ -21,11 +21,23 @@ block content
             .container
                 h2.h2-common.playlists__title Слушайте вечную классику вместе с нами
                 .playlists__wrapper
-                    .playlists__item
+                    .playlists__item.playlists__item--labeled
+                        .playlists__label
+                            .playlists__label-icon
+                                +icon('note1')
+                            .playlists__label-content
+                                .playlists__label-text Услышать в программе:
+                                a(href="#").playlists__label-title Верни мне музыку<br>вторая строка
                         iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
                     .playlists__item
                         iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
-                    .playlists__item
+                    .playlists__item.playlists__item--labeled
+                        .playlists__label
+                            .playlists__label-icon
+                                +icon('note1')
+                            .playlists__label-content
+                                .playlists__label-text Услышать в программе:
+                                a(href="#").playlists__label-title Верни мне музыку<br>вторая строка
                         iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
                     .playlists__item
                         iframe(frameborder="0" style="border:none;width:100%;height:100%;" width="100%" height="100%" data-src="https://music.yandex.ru/iframe/#album/10139759" loading="lazy")
