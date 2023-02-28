@@ -1,0 +1,248 @@
+<krpano version="1.0.8.15" title="Филармония" onstart="startup();">
+	<include url="skin/vtourskin.xml" />
+
+	<skin_settings 
+				bingmaps="false"
+	            bingmaps_key=""
+				bingmaps_zoombuttons="true"
+				gyro="true"
+				thumbs="true"
+				thumbsopened="true"
+				soundon="false"
+				soundvolume="0.7"
+				mp3file="sound.mp3"
+				repeats="1"
+				planet="false"
+				horizont="0"
+				angle="90"
+				thumbtitles="true"
+				preview_count=""
+				tooltips_hotspots="true" thumbswidth="176" thumbsheight="86" thumbspadding="5" thumbsxposition="0" thumbscrop="0|80|240|120" controlbar_offset="130"
+	            />			   
+	<autorotate enabled="true" waittime="6" speed="5" />
+	
+	<action name="startup">
+		if(startscene === null, copy(startscene,scene[2].name));
+		loadscene(get(startscene), null, MERGE);
+		if(skin_settings.thumbs, enablethumbs() );
+		
+		if(skin_settings.thumbsopened, 
+			set(layer[skin_btn_thumbs].onhover, showtext(Скрыть панель) );
+			set(plugin[skin_btn_thumbs].align, bottomright);
+			set(plugin[skin_btn_thumbs].crop, 480|0|20|40); 
+			,
+			set(layer[skin_btn_thumbs].onhover, showtext(Показать панель) );
+			set(plugin[skin_btn_thumbs].align, bottomleft);
+			set(plugin[skin_btn_thumbs].crop, 480|40|20|40);
+			set(layer[skin_scroll_window].x, -100%);
+			copy(layer[skin_control_bar].y, layer[skin_control_bar].y_closed );
+			);
+	</action>
+	
+	<action name="enablethumbs" >
+		copy(layer[skin_btn_thumbs].visible, skin_settings.thumbs );
+		copy(layer[skin_scroll_window].visible, skin_settings.thumbs );
+	</action>
+	
+﻿<scene name="pano-0" title="Холл к.з. им. В.И. Сафонова" onstart=""  thumburl="panos/0.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="9.189" vlookat="-1.372" fovtype="MFOV" fov="131.423" maxpixelzoom="0.95" fovmin="50" fovmax="145" fisheye="0" limitview="auto" />
+	<control zoomtocursor="false"	zoomoutcursor="true"	mouseaccelerate="0.7"	mousefovchange="0.7"	keybaccelerate="0.4"	keybspeed="0.4"	keybfovchange="0.2"  />
+	<display stillquality10="BEST"  stillquality="BEST"/>
+
+	<preview url="panos/0.tiles/preview.jpg" />
+
+	<image type="CUBE" multires="true" tilesize="1000" progressive="false">
+			<level tiledimagewidth="4775" tiledimageheight="4775">
+				<cube url="panos/0.tiles/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2171" tiledimageheight="2171">
+				<cube url="panos/0.tiles/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1000" tiledimageheight="1000">
+				<cube url="panos/0.tiles/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/0.tiles/mobile_%s.jpg" />
+			</mobile>
+			<mobile devices="iPad+Retina">
+				<cube url="panos/0.tiles/ipad3_%s.jpg" />
+			</mobile>
+		</image>
+
+<hotspot name="imagespot1" style="popup_spot" 
+ath="44.965"
+atv="4.551"
+onhover="showtext(Фото)" 
+onclick="open_popup(11.jpg);" /> 
+<plugin name="preload_imagespot1" visible="false" keep="false" url="%SWFPATH%/photos/11.jpg" /> 
+
+	
+</scene>
+<!--
+<scene name="pano-1" title="к.з. им. А.Н. Скрябина" onstart=""  thumburl="panos/1.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="5.050" vlookat="-3.340" fovtype="MFOV" fov="132.617" maxpixelzoom="0.95" fovmin="50" fovmax="145" fisheye="0" limitview="auto" />
+	<control zoomtocursor="false"	zoomoutcursor="true"	mouseaccelerate="0.7"	mousefovchange="0.7"	keybaccelerate="0.4"	keybspeed="0.4"	keybfovchange="0.2"  />
+	<display stillquality10="BEST"  stillquality="BEST"/>
+
+	<preview url="panos/1.tiles/preview.jpg" />
+
+	<image type="CUBE" multires="true" tilesize="1000" progressive="false">
+			<level tiledimagewidth="4680" tiledimageheight="4680">
+				<cube url="panos/1.tiles/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2128" tiledimageheight="2128">
+				<cube url="panos/1.tiles/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1000" tiledimageheight="1000">
+				<cube url="panos/1.tiles/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/1.tiles/mobile_%s.jpg" />
+			</mobile>
+			<mobile devices="iPad+Retina">
+				<cube url="panos/1.tiles/ipad3_%s.jpg" />
+			</mobile>
+		</image>
+
+<hotspot name="imagespot1" style="popup_spot" 
+ath="43.114"
+atv="3.651"
+onhover="showtext(Фото)" 
+onclick="open_popup(1.jpg);" /> 
+<plugin name="preload_imagespot1" visible="false" keep="false" url="%SWFPATH%/photos/1.jpg" /> 
+
+<hotspot name="imagespot2" style="popup_spot" 
+ath="21.931"
+atv="2.597"
+onhover="showtext(Фото)" 
+onclick="open_popup(3.jpg);" /> 
+<plugin name="preload_imagespot2" visible="false" keep="false" url="%SWFPATH%/photos/2.jpg" /> 
+<hotspot name="imagespot3" style="popup_spot" 
+ath="156.211"
+atv="-3.834"
+onhover="showtext(Фото)" 
+onclick="open_popup(2.jpg);" /> 
+<plugin name="preload_imagespot3" visible="false" keep="false" url="%SWFPATH%/photos/2.jpg" /> 
+<hotspot name="imagespot4" style="popup_spot" 
+ath="140.614"
+atv="-14.194"
+onhover="showtext(Фото)" 
+onclick="open_popup(12.jpg);" /> 
+<plugin name="preload_imagespot4" visible="false" keep="false" url="%SWFPATH%/photos/12.jpg" /> 
+
+</scene>﻿-->
+
+<scene name="pano-2-2" title="к.з. им. В.И. Сафонова" onstart=""  thumburl="panos/2-2.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="7.371" vlookat="-1.546" fovtype="MFOV" fov="135.266" maxpixelzoom="0.95" fovmin="50" fovmax="145" fisheye="0" limitview="auto" />
+	<control zoomtocursor="false"	zoomoutcursor="true"	mouseaccelerate="0.7"	mousefovchange="0.7"	keybaccelerate="0.4"	keybspeed="0.4"	keybfovchange="0.2"  />
+	<display stillquality10="BEST"  stillquality="BEST"/>
+
+	<preview url="panos/2-2.tiles/preview.jpg" />
+
+	<image type="CUBE" multires="true" tilesize="1000" progressive="false">
+			<level tiledimagewidth="4775" tiledimageheight="4775">
+				<cube url="panos/2-2.tiles/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2171" tiledimageheight="2171">
+				<cube url="panos/2-2.tiles/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1000" tiledimageheight="1000">
+				<cube url="panos/2-2.tiles/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/2-2.tiles/mobile_%s.jpg" />
+			</mobile>
+			<mobile devices="iPad+Retina">
+				<cube url="panos/2-2.tiles/ipad3_%s.jpg" />
+			</mobile>
+		</image>
+
+<hotspot name="imagespot1" style="popup_spot" 
+ath="-127.903"
+atv="-0.728"
+onhover="showtext(Фото)" 
+onclick="open_popup(6.jpg);" /> 
+<plugin name="preload_imagespot1" visible="false" keep="false" url="%SWFPATH%/photos/6.jpg" /> 
+<hotspot name="imagespot2" style="popup_spot" 
+ath="-173.769"
+atv="-31.210"
+onhover="showtext(Фото)" 
+onclick="open_popup(7-1.jpg);" /> 
+<plugin name="preload_imagespot2" visible="false" keep="false" url="%SWFPATH%/photos/7-1.jpg" /> 
+<hotspot name="imagespot3" style="popup_spot" 
+ath="6.841"
+atv="0.968"
+onhover="showtext(Вид со сцены)" 
+onclick="open_popup(7.jpg);" /> 
+<plugin name="preload_imagespot3" visible="false" keep="false" url="%SWFPATH%/photos/7.jpg" /> 
+<hotspot name="imagespot4" style="popup_spot" 
+ath="-38.426"
+atv="-28.743"
+onhover="showtext(Фото)" 
+onclick="open_popup(8.jpg);" /> 
+<plugin name="preload_imagespot4" visible="false" keep="false" url="%SWFPATH%/photos/8.jpg" /> 
+<hotspot name="imagespot5" style="popup_spot" 
+ath="-63.216"
+atv="-35.571"
+onhover="showtext(Фото)" 
+onclick="open_popup(9.jpg);" /> 
+<plugin name="preload_imagespot5" visible="false" keep="false" url="%SWFPATH%/photos/9.jpg" /> 
+<hotspot name="imagespot6" style="popup_spot" 
+ath="-41.392"
+atv="-2.388"
+onhover="showtext(Фото)" 
+onclick="open_popup(10.jpg);" /> 
+<plugin name="preload_imagespot6" visible="false" keep="false" url="%SWFPATH%/photos/10.jpg" /> 
+<hotspot name="imagespot7" style="popup_spot" 
+ath="43.854"
+atv="-30.001"
+onhover="showtext(Фото)" 
+onclick="open_popup(13.jpg);" /> 
+<plugin name="preload_imagespot7" visible="false" keep="false" url="%SWFPATH%/photos/13.jpg" /> 
+</scene>
+
+﻿<scene name="pano-3" title="Фойе к.з. им. В.И.Сафонова" onstart=""  thumburl="panos/3.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="4.222" vlookat="15.554" fovtype="MFOV" fov="116.367" maxpixelzoom="0.95" fovmin="50" fovmax="145" fisheye="0" limitview="auto" />
+	<control zoomtocursor="false"	zoomoutcursor="true"	mouseaccelerate="0.7"	mousefovchange="0.7"	keybaccelerate="0.4"	keybspeed="0.4"	keybfovchange="0.2"  />
+	<display stillquality10="BEST"  stillquality="BEST"/>
+
+	<preview url="panos/3.tiles/preview.jpg" />
+
+	<image type="CUBE" multires="true" tilesize="1000" progressive="false">
+			<level tiledimagewidth="4775" tiledimageheight="4775">
+				<cube url="panos/3.tiles/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2171" tiledimageheight="2171">
+				<cube url="panos/3.tiles/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1000" tiledimageheight="1000">
+				<cube url="panos/3.tiles/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/3.tiles/mobile_%s.jpg" />
+			</mobile>
+			<mobile devices="iPad+Retina">
+				<cube url="panos/3.tiles/ipad3_%s.jpg" />
+			</mobile>
+		</image>
+<hotspot name="imagespot1" style="popup_spot" 
+ath="-3.901"
+atv="35.157"
+onhover="showtext(Фото)" 
+onclick="open_popup(5.jpg);" /> 
+<plugin name="preload_imagespot1" visible="false" keep="false" url="%SWFPATH%/photos/5.jpg" /> 
+<hotspot name="imagespot2" style="popup_spot" 
+ath="-42.571"
+atv="2.388"
+onhover="showtext(Фото)" 
+onclick="open_popup(4.jpg);" /> 
+<plugin name="preload_imagespot2" visible="false" keep="false" url="%SWFPATH%/photos/4.jpg" /> 
+
+	
+</scene>
+
+</krpano>

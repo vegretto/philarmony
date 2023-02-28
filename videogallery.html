@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Филармония</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="styles/style.min.css">
+	</head>
+	<body>
+		<header class="header">
+			<div class="container container--header">
+				<div class="header__inner"><a class="header__logo-box" href="#">
+						<div class="header__logo">
+							<svg class="icon icon-logo">
+								<use xlink:href="img/svg/sprite.svg#logo"></use>
+							</svg>
+						</div>
+						<div class="header__logo-inner">
+							<div class="header__logo-descriptor">Северо-Кавказская государственная Филармония имени В.&nbsp;И.&nbsp;Сафонова</div>
+							<div class="header__logo-season">
+								<picture>
+									<source data-srcset="img/header-season.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 110 35&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;110&quot; height=&quot;35&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/header-season.png" alt="image" width="110" height="35"/>
+								</picture>
+							</div>
+						</div></a>
+					<div class="header__navs-wrapper">
+						<nav class="header__main-nav"><a class="header__main-nav-item header__main-nav-item--highlighted" href="#">Афиша и билеты</a><a class="header__main-nav-item" href="#">Орган</a><a class="header__main-nav-item" href="#">Оркестр</a><a class="header__main-nav-item" href="#">Музей</a><a class="header__main-nav-item" href="#">Детям</a><a class="header__main-nav-item" href="#">Контакты</a></nav>
+						<div class="header__secondary-nav-wrapper">
+							<nav class="header__secondary-nav">
+								<div class="header__secondary-nav-item header__secondary-nav-item--dropdown"><a class="header__secondary-nav-item-title" href="#">Филармония</a>
+									<div class="header__dropdown-box"><a class="header__dropdown-item" href="#">История филармонии</a><a class="header__dropdown-item" href="#">Наши достижения</a><a class="header__dropdown-item" href="#">Вакансии</a></div>
+								</div>
+								<div class="header__secondary-nav-item header__secondary-nav-item--dropdown"><a class="header__secondary-nav-item-title" href="#">Залы</a>
+									<div class="header__dropdown-box"><a class="header__dropdown-item" href="#">История филармонии</a><a class="header__dropdown-item" href="#">Наши достижения</a><a class="header__dropdown-item" href="#">Вакансии</a></div>
+								</div><a class="header__secondary-nav-item" href="#">Репертуар</a><a class="header__secondary-nav-item" href="#">Коллективы и солисты</a><a class="header__secondary-nav-item" href="#">Галерея</a><a class="header__secondary-nav-item" href="#">Проекты</a><a class="header__secondary-nav-item" href="#">Новости</a><a class="header__secondary-nav-item" href="#">Зрителям</a>
+							</nav>
+						</div>
+					</div>
+					<div class="header__unfold-btn js-unfold-nav">
+						<svg class="icon icon-arrow-down">
+							<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+						</svg>
+					</div>
+					<div class="header__mobile-menu-toggle js-open-mobile-menu">
+						<svg class="icon icon-menu">
+							<use xlink:href="img/svg/sprite.svg#menu"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main-wrapper main-wrapper--videogallery">
+			<div class="top-block">
+				<div class="breadcrumbs">
+					<div class="container">
+						<div class="breadcrumbs__inner"><a class="breadcrumbs__item" href="#">Главная</a><a class="breadcrumbs__item" href="#">Залы филармонии</a>
+							<div class="breadcrumbs__item">Хлебные крошки</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<h1 class="h1-common">Видеогаллерея</h1>
+				</div>
+			</div>
+			<section class="filters">
+				<div class="container">
+					<div class="filters__subtitle mobile-hide">Выбрать жанр:</div>
+					<div class="filters__dropdowns mb-0">
+						<div class="filters__dropdown mobile-only">
+							<div class="filters__open-dropdown open-dropdown js-open-dropdown">Выбрать жанр
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+							<div class="filters__dropdown-box dropdown js-dropdown">
+								<div class="filters__dropdown-box-inner"></div>
+							</div>
+						</div>
+						<div class="filters__box">
+							<div class="filters__item mobile-move js-toggle-active">Органная музыка<span class="filters__item-num">(40)</span></div>
+							<div class="filters__item mobile-move js-toggle-active">Симфонический оркестр<span class="filters__item-num">(20)</span></div>
+							<div class="filters__item mobile-move js-toggle-active">Филармонический хор<span class="filters__item-num">(10)</span></div>
+							<div class="filters__item mobile-move js-toggle-active">Музыкальный спектакль<span class="filters__item-num">(10)</span></div>
+							<div class="filters__item mobile-move js-toggle-active">Детский спектакль<span class="filters__item-num">(10)</span></div>
+							<div class="filters__item mobile-move js-toggle-active">Камерные программы<span class="filters__item-num">(10)</span></div>
+							<div class="filters__item mobile-move js-toggle-active">Опера<span class="filters__item-num">(10)</span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="videos">
+				<div class="bg-wrapper bg-wrapper--no-of">
+					<picture>
+						<source data-srcset="img/gradient-bg.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 1300 1400&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;1300&quot; height=&quot;1400&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/gradient-bg.png" alt="image" width="1300" height="1400"/>
+					</picture>
+				</div>
+				<div class="container">
+					<div class="videos__items">
+						<div class="videos__item">
+							<div class="videos__img">
+								<div class="videos__text">Видео</div>
+								<div class="videos__icon">
+									<svg class="icon icon-play">
+										<use xlink:href="img/svg/sprite.svg#play"></use>
+									</svg>
+								</div><a class="fancybox.iframe" href="https://www.youtube.com/watch?v=S61ENc51Z1Q" data-fancybox="videogallery">
+									<picture>
+										<source data-srcset="img/event-gallery-video.webp" type="image/webp"/><img class="lazyload" data-src="img/event-gallery-video.png" alt="image" width="" height=""/>
+									</picture></a>
+								<video controls="controls" style="display:none" width="" height="">
+									<source src="video/https://www.youtube.com/watch?v=S61ENc51Z1Q.undefined" type="video/mp4"/>
+								</video>
+							</div>
+							<div class="videos__bottom">
+								<div class="videos__title">Длинное название видео</div>
+								<div class="videos__author">Симфонический оркестр</div>
+							</div>
+						</div>
+						<div class="videos__item">
+							<div class="videos__img">
+								<div class="videos__text">Видео</div>
+								<div class="videos__icon">
+									<svg class="icon icon-play">
+										<use xlink:href="img/svg/sprite.svg#play"></use>
+									</svg>
+								</div><a class="fancybox.iframe" href="https://www.youtube.com/watch?v=S61ENc51Z1Q" data-fancybox="videogallery">
+									<picture>
+										<source data-srcset="img/event-gallery-video.webp" type="image/webp"/><img class="lazyload" data-src="img/event-gallery-video.png" alt="image" width="" height=""/>
+									</picture></a>
+								<video controls="controls" style="display:none" width="" height="">
+									<source src="video/https://www.youtube.com/watch?v=S61ENc51Z1Q.undefined" type="video/mp4"/>
+								</video>
+							</div>
+							<div class="videos__bottom">
+								<div class="videos__title">Длинное название видео</div>
+								<div class="videos__author">Симфонический оркестр</div>
+							</div>
+						</div>
+						<div class="videos__item">
+							<div class="videos__img">
+								<div class="videos__text">Видео</div>
+								<div class="videos__icon">
+									<svg class="icon icon-play">
+										<use xlink:href="img/svg/sprite.svg#play"></use>
+									</svg>
+								</div><a class="fancybox.iframe" href="https://www.youtube.com/watch?v=S61ENc51Z1Q" data-fancybox="videogallery">
+									<picture>
+										<source data-srcset="img/event-gallery-video.webp" type="image/webp"/><img class="lazyload" data-src="img/event-gallery-video.png" alt="image" width="" height=""/>
+									</picture></a>
+								<video controls="controls" style="display:none" width="" height="">
+									<source src="video/https://www.youtube.com/watch?v=S61ENc51Z1Q.undefined" type="video/mp4"/>
+								</video>
+							</div>
+							<div class="videos__bottom">
+								<div class="videos__title">Длинное название видео</div>
+								<div class="videos__author">Симфонический оркестр</div>
+							</div>
+						</div>
+						<div class="videos__item">
+							<div class="videos__img">
+								<div class="videos__text">Видео</div>
+								<div class="videos__icon">
+									<svg class="icon icon-play">
+										<use xlink:href="img/svg/sprite.svg#play"></use>
+									</svg>
+								</div><a class="fancybox.iframe" href="https://www.youtube.com/watch?v=S61ENc51Z1Q" data-fancybox="videogallery">
+									<picture>
+										<source data-srcset="img/event-gallery-video.webp" type="image/webp"/><img class="lazyload" data-src="img/event-gallery-video.png" alt="image" width="" height=""/>
+									</picture></a>
+								<video controls="controls" style="display:none" width="" height="">
+									<source src="video/https://www.youtube.com/watch?v=S61ENc51Z1Q.undefined" type="video/mp4"/>
+								</video>
+							</div>
+							<div class="videos__bottom">
+								<div class="videos__title">Длинное название видео</div>
+								<div class="videos__author">Симфонический оркестр</div>
+							</div>
+						</div>
+						<div class="videos__item">
+							<div class="videos__img">
+								<div class="videos__text">Видео</div>
+								<div class="videos__icon">
+									<svg class="icon icon-play">
+										<use xlink:href="img/svg/sprite.svg#play"></use>
+									</svg>
+								</div><a class="fancybox.iframe" href="https://www.youtube.com/watch?v=S61ENc51Z1Q" data-fancybox="videogallery">
+									<picture>
+										<source data-srcset="img/event-gallery-video.webp" type="image/webp"/><img class="lazyload" data-src="img/event-gallery-video.png" alt="image" width="" height=""/>
+									</picture></a>
+								<video controls="controls" style="display:none" width="" height="">
+									<source src="video/https://www.youtube.com/watch?v=S61ENc51Z1Q.undefined" type="video/mp4"/>
+								</video>
+							</div>
+							<div class="videos__bottom">
+								<div class="videos__title">Длинное название видео</div>
+								<div class="videos__author">Симфонический оркестр</div>
+							</div>
+						</div>
+						<div class="videos__item">
+							<div class="videos__img">
+								<div class="videos__text">Видео</div>
+								<div class="videos__icon">
+									<svg class="icon icon-play">
+										<use xlink:href="img/svg/sprite.svg#play"></use>
+									</svg>
+								</div><a class="fancybox.iframe" href="https://www.youtube.com/watch?v=S61ENc51Z1Q" data-fancybox="videogallery">
+									<picture>
+										<source data-srcset="img/event-gallery-video.webp" type="image/webp"/><img class="lazyload" data-src="img/event-gallery-video.png" alt="image" width="" height=""/>
+									</picture></a>
+								<video controls="controls" style="display:none" width="" height="">
+									<source src="video/https://www.youtube.com/watch?v=S61ENc51Z1Q.undefined" type="video/mp4"/>
+								</video>
+							</div>
+							<div class="videos__bottom">
+								<div class="videos__title">Длинное название видео</div>
+								<div class="videos__author">Симфонический оркестр</div>
+							</div>
+						</div>
+					</div>
+					<div class="show-more mb-0">
+						<div class="show-more__inner">
+							<div class="show-more__round-text" id="js-show-more-circle">Показать больше</div>
+							<div class="show-more__icon">
+								<svg class="icon icon-pretty-arrow">
+									<use xlink:href="img/svg/sprite.svg#pretty-arrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="big-links-block">
+				<div class="bg-wrapper bg-wrapper--no-of">
+					<picture>
+						<source data-srcset="img/gradient-bg.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 1300 1400&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;1300&quot; height=&quot;1400&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/gradient-bg.png" alt="image" width="1300" height="1400"/>
+					</picture>
+				</div>
+				<div class="container">
+					<div class="big-links"><a class="big-links__item" href="#">
+							<div class="bg-wrapper">
+								<picture>
+									<source data-srcset="img/link-img1.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 567 352&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;567&quot; height=&quot;352&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/link-img1.png" alt="image" width="567" height="352"/>
+								</picture>
+							</div>
+							<div class="big-links__content">
+								<div class="big-links__title">Откройте удивительный мир музыки ребенку</div>
+								<div class="big-links__text text-center">Детские музыкальные спектакли<br>Экскурсии по музею Детские&nbsp;абонементы</div>
+							</div></a><a class="big-links__item" href="#">
+							<div class="bg-wrapper">
+								<picture>
+									<source data-srcset="img/link-img2.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 567 352&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;567&quot; height=&quot;352&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/link-img2.png" alt="image" width="567" height="352"/>
+								</picture>
+							</div>
+							<div class="big-links__content">
+								<div class="big-links__title">Музей филармонии в Кисловодске</div>
+								<div class="big-links__text">На экскурсии вы увидите и узнаете историю музыкальных инструментов 19–20 века, старинных нот и фотографий, уникальных архивов рукописей и изобразительного фонда</div>
+							</div></a></div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__subscribe">
+					<div class="bg-wrapper">
+						<picture>
+							<source data-srcset="img/footer-subscribe.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 1170 290&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;1170&quot; height=&quot;290&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/footer-subscribe.png" alt="image" width="1170" height="290"/>
+						</picture>
+					</div>
+					<div class="footer__subscribe-content">
+						<div class="footer__subscribe-top">
+							<div class="footer__subscribe-title">Следите за афишей филармонии</div>
+							<div class="footer__subscribe-text">Раз в месяц отправляем афишу с самыми интересными событиями. Не пропустите музыкальные премьеры и&nbsp;гастроли лучших музыкантов,театров и артистов России.</div>
+						</div>
+						<form class="footer__subscribe-form">
+							<div class="form-group form-group--text footer__subscribe-input">
+								<input class="input-text" type="email" name="input-text" id="subscribe-mail" placeholder="example@pochta.ru" required="required"/>
+								<div class="error-message">Это поле обязательно для заполнения</div>
+							</div>
+							<button class="common-btn common-btn--blue js-open-modal" type="submit" data-modal="modal-subscribe-complete">Следить за афишей</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__nav-wrappers">
+					<div class="footer__nav-wrapper footer__nav-wrapper-left">
+						<div class="footer__nav-title js-footer-dropdown opened">Афиша
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+						</div>
+						<nav class="footer__nav footer__nav--mobile-folded footer__nav--mobile-unfolded">
+							<div class="col-3 col-3--mobile-lg"><a class="footer__nav-item" href="#">Кисловодск</a><a class="footer__nav-item" href="#">Ессентуки</a><a class="footer__nav-item" href="#">Пятигорск</a><a class="footer__nav-item" href="#">Железноводск</a></div>
+							<div class="col-3"><a class="footer__nav-item" href="#">Органная музыка</a><a class="footer__nav-item" href="#">Симфонический оркестр</a><a class="footer__nav-item" href="#">Филармонический хор</a><a class="footer__nav-item" href="#">Опера</a></div>
+							<div class="col-3"><a class="footer__nav-item" href="#">Музыкальный спектакль</a><a class="footer__nav-item" href="#">Камерная музыка</a><a class="footer__nav-item" href="#">Детям</a></div>
+						</nav>
+					</div>
+					<div class="footer__nav-wrapper footer__nav-wrapper-right">
+						<div class="footer__nav-title js-footer-dropdown">Филармония
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+						</div>
+						<nav class="footer__nav footer__nav--mobile-folded">
+							<div class="col-3"><a class="footer__nav-item" href="#">Залы</a><a class="footer__nav-item" href="#">Репертуар</a><a class="footer__nav-item" href="#">Коллективы и солисты</a></div>
+							<div class="col-3"><a class="footer__nav-item" href="#">Проекты</a><a class="footer__nav-item" href="#">Детям</a><a class="footer__nav-item" href="#">Музей</a></div>
+							<div class="col-3"><a class="footer__nav-item" href="#">Галерея</a><a class="footer__nav-item" href="#">Новости</a><a class="footer__nav-item" href="#">Зрителям</a></div>
+						</nav>
+					</div>
+				</div>
+				<div class="footer__contacts">
+					<div class="contacts-block">
+						<div class="contacts-block__item">
+							<div class="contacts-block__city">Кисловодск</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87937) 2-04-22</a>
+						</div>
+						<div class="contacts-block__item">
+							<div class="contacts-block__city">Пятигорск</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87937) 2-04-22</a>
+						</div>
+						<div class="contacts-block__item">
+							<div class="contacts-block__city">Ессентуки</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87934) 6-75-56</a>
+						</div>
+						<div class="contacts-block__item">
+							<div class="contacts-block__city">Железноводск</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87934) 6-75-56</a>
+						</div>
+					</div><a class="common-btn common-btn--blue" href="#">контакты</a>
+				</div>
+				<div class="footer__socials">
+					<div class="socials"><a class="socials__item" href="#">
+							<svg class="icon icon-vk">
+								<use xlink:href="img/svg/sprite.svg#vk"></use>
+							</svg></a><a class="socials__item" href="#">
+							<svg class="icon icon-facebook">
+								<use xlink:href="img/svg/sprite.svg#facebook"></use>
+							</svg></a><a class="socials__item socials__item--insta" href="#">
+							<svg class="icon icon-instagram">
+								<use xlink:href="img/svg/sprite.svg#instagram"></use>
+							</svg></a><a class="socials__item" href="#">
+							<svg class="icon icon-odnoklassniki">
+								<use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+							</svg></a><a class="socials__item" href="#">
+							<svg class="icon icon-youtube">
+								<use xlink:href="img/svg/sprite.svg#youtube"></use>
+							</svg></a></div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copywrite">© 2021 Северо-Кавказская государственная филармония им. В.И. Сафонова</div>
+					<div class="footer__langs"><a class="footer__lang current" href="#">Русский</a><a class="footer__lang" href="#">English</a></div>
+					<div class="footer__developers">Разработка и продвижение сайта:<a href="https://webelement.ru/"> WEBELEMENT</a></div>
+				</div>
+			</div>
+		</footer>
+		<div class="mobile-menu">
+			<div class="mobile-menu__close-cross js-close-mobile-menu">
+				<svg class="icon icon-close">
+					<use xlink:href="img/svg/sprite.svg#close"></use>
+				</svg>
+			</div>
+			<div class="mobile-menu__top">
+				<nav class="mobile-menu__main-nav"><a class="mobile-menu__main-nav-item" href="#">Афиша и билеты</a><a class="mobile-menu__main-nav-item" href="#">Орган</a><a class="mobile-menu__main-nav-item" href="#">Оркестр</a><a class="mobile-menu__main-nav-item" href="#">Музей</a><a class="mobile-menu__main-nav-item" href="#">Детям</a><a class="mobile-menu__main-nav-item" href="#">Контакты</a></nav>
+			</div>
+			<div class="mobile-menu__bottom">
+				<nav class="mobile-menu__secondary-nav">
+					<div class="mobile-menu__secondary-nav-col"><a class="mobile-menu__secondary-nav-item" href="#">Филармония</a><a class="mobile-menu__secondary-nav-item" href="#">Залы</a><a class="mobile-menu__secondary-nav-item" href="#">Репертуар</a><a class="mobile-menu__secondary-nav-item" href="#">Коллективы и&nbsp;солисты</a></div>
+					<div class="mobile-menu__secondary-nav-col"><a class="mobile-menu__secondary-nav-item" href="#">Галерея</a><a class="mobile-menu__secondary-nav-item" href="#">Проекты</a><a class="mobile-menu__secondary-nav-item" href="#">Новости</a><a class="mobile-menu__secondary-nav-item" href="#">Зрителям</a></div>
+				</nav>
+				<div class="contacts-block">
+					<div class="contacts-block__item">
+						<div class="contacts-block__city">Кисловодск</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87937) 2-04-22</a>
+					</div>
+					<div class="contacts-block__item">
+						<div class="contacts-block__city">Пятигорск</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87937) 2-04-22</a>
+					</div>
+					<div class="contacts-block__item">
+						<div class="contacts-block__city">Ессентуки</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87934) 6-75-56</a>
+					</div>
+					<div class="contacts-block__item">
+						<div class="contacts-block__city">Железноводск</div><a class="contacts-block__phone" href="tel:+78793720422">8 (87934) 6-75-56</a>
+					</div>
+				</div>
+				<div class="socials"><a class="socials__item" href="#">
+						<svg class="icon icon-vk">
+							<use xlink:href="img/svg/sprite.svg#vk"></use>
+						</svg></a><a class="socials__item" href="#">
+						<svg class="icon icon-facebook">
+							<use xlink:href="img/svg/sprite.svg#facebook"></use>
+						</svg></a><a class="socials__item" href="#">
+						<svg class="icon icon-odnoklassniki">
+							<use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+						</svg></a><a class="socials__item" href="#">
+						<svg class="icon icon-youtube">
+							<use xlink:href="img/svg/sprite.svg#youtube"></use>
+						</svg></a><a class="socials__item" href="#">
+						<svg class="icon icon-instagram">
+							<use xlink:href="img/svg/sprite.svg#instagram"></use>
+						</svg></a></div>
+			</div>
+		</div>
+		<div class="modal modal--subscribe-complete" id="modal-subscribe-complete">
+			<div class="modal__inner">
+				<div class="modal__close-cross js-close-modal">
+					<svg class="icon icon-close">
+						<use xlink:href="img/svg/sprite.svg#close"></use>
+					</svg>
+				</div>
+				<div class="modal__icons">
+					<svg class="icon icon-note1">
+						<use xlink:href="img/svg/sprite.svg#note1"></use>
+					</svg>
+					<svg class="icon icon-note2">
+						<use xlink:href="img/svg/sprite.svg#note2"></use>
+					</svg>
+					<svg class="icon icon-note3">
+						<use xlink:href="img/svg/sprite.svg#note3"></use>
+					</svg>
+				</div>
+				<div class="modal__title">Рады, что вы с нами.</div>
+				<div class="modal__text">
+					<p>Ждите интересных писем! А мы — ждем вас на музыкальных событиях филармонии.</p>
+				</div>
+			</div>
+		</div>
+		<div class="cookies-disclaimer show">
+			<div class="cookies-disclaimer__inner">
+				<div class="cookies-disclaimer__text">Мы используем cookie-файлы, чтобы вам было удобнее пользоваться нашим сайтом.</div>
+				<div class="cookies-disclaimer__btn js-close-cookie">Здорово!</div>
+			</div>
+		</div>
+		<script src="scripts/vendor.min.js"></script>
+		<script src="scripts/main.min.js"></script>
+	</body>
+</html>
